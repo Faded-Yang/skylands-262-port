@@ -38,6 +38,8 @@
 - CEI 26.3 流体注册（FluidEntry 直注册 still/flowing）已在 live（72880D90…），编译 0 错；MCP 实测 experience/blue_dye 两流体块 setblock+读回一致；DP 保持 live（01FAFE34…，新构建仅 fabric.mod.json 版本下限差异）。详见 docs/port-fluids-263.md。
 
 ## 机械 / 交互
+- Sophisticated Storage 1.6.7（reduced 壳，5e49a8ac…）：59 方块 + 147 物品（88 plain + 59 block items）+ 自建创造栏「精妙存储」；item model 全量重建为 vanilla item/generated（原 mod 自定义 loader 在 26.3 不可用）。MCP 实测：147 items 日志、give copper_chest→铜箱子/copper_barrel→铜桶（无 %s）、setblock 读回、Missing model 0、bad item textures 0、0 crash。
+- Sophisticated Backpacks 3.26.12（reduced 壳，68573bde…）：79 注册项（6 方块 + 73 物品）+ 自建创造栏「精妙背包」。MCP 实测：give backpack/advanced_pickup_upgrade 到手（已汉化）、setblock backpack/diamond_backpack 读回一致、Missing model 0、0 crash、registry 0。GUI/存储功能未移植。
 - Create: Connected 1.3.3（reduced，37fec0a3…）：109 个 QoL 方块（齿轮箱/离合器/滑槽/风扇染料催化剂/copycat 系列等）纯外观注册 + 自建创造栏页签。MCP 实测：109 blocks 注册日志、10/10 setblock 读回一致、Missing model 0、0 crash、registry 0。
 
 ## 结构
@@ -51,3 +53,8 @@
 
 ## 已知限制
 见 docs/KNOWN-LIMITATIONS.md。
+
+## 广度收口补充（R620）
+- **TFMG 436/436 方块**（zh_cn 1299 键，锂火把/铝块等中文名生效）；**create_connected 109**；**create_submarine 43**（3 命名空间）；**createpropulsion 33**；**copycats 46**；**sophisticated backpacks 79 项 / storage 59 方块+147 物品**（壳，无 GUI）；**create-hangars 8 结构**；**awakened islands**（\`/sky262_islands spawn\` 实测生成带植被浮空岛）；**No Void Structures**（3 条 /locate 命中）。
+- 验证：MCP 实测 5 方块读回、NS 红杉林实拍、任务书中文按钮、\`/loot\`+\`/recipe\` 成功；114 jar 标题回归 PASS（Loading 194+ mods）。
+- 新增硬断言：**解 jar 后**方块模型递归 parent、**item 模型贴图存在性**、**lang 值不含格式占位符** 三查，任一不通过不打包。
