@@ -331,3 +331,8 @@ tools/launch26/launch.py        26.3 启动器（--watch-title / --timeout）
 - physics_assembler 右键交互正常、拉杆渲染器注册；
 - throttle_lever 长按交互 60 tick 无崩溃；
 - 任务书中文、无语言加载失败；0 registry error、0 crash。
+
+### natures_spirit（生物群系）—— 本轮打通
+- 编译 **0 错误**；数据层完成 26.3 schema 迁移（biome 必填 `features`(11 step)/`carvers`、effects 颜色字符串、旧 `{"Name","Properties"}` → `{"id","properties"}`、`configured_feature`→`feature` 目录、noise `firstOctave`→`base_octave`、placement `random_offset`→`offset`）；
+- **153 个 NS 生物群系可加载/可生成/可定位**（`/locate biome` 实测 3/3 命中，传送后地表正常）；
+- 暂缓（后续独立任务）：地形特征（feature/placed_feature 内容）、loot_table/recipe/advancement 的 26.3 重写（当前移除回落原版）。
