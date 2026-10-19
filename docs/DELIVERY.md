@@ -335,6 +335,9 @@ tools/launch26/launch.py        26.3 启动器（--watch-title / --timeout）
 ### natures_spirit（生物群系）—— 本轮打通
 - 编译 **0 错误**；数据层完成 26.3 schema 迁移（biome 必填 `features`(11 step)/`carvers`、effects 颜色字符串、旧 `{"Name","Properties"}` → `{"id","properties"}`、`configured_feature`→`feature` 目录、noise `firstOctave`→`base_octave`、placement `random_offset`→`offset`）；
 - **153 个 NS 生物群系可加载/可生成/可定位**（`/locate biome` 实测 3/3 命中，传送后地表正常）；
-- **地形特征已恢复**：tree/ore 两类（107 feature + 133 placed_feature）在 `alpine_clearings`/`redwood_forest` 试点生效，实测红杉林成片生成；树形用 26.3 原版 placer（NS 自定义 placer 待反射注册后还原）。
-- **掉落表 720 + 配方 826 已恢复**：实测 `/loot give` 掉出白杨木台阶、`/recipe give` 解锁配方。
-- 暂缓：全量 153 群系的 features 填充（当前仅 2 个试点）、advancement（513 条待 26.3 重写）、NS 自定义 placer 的反射注册还原树形。
+- **功能性完整（B2 定稿，`84b1c308…`）**：
+  - worldgen：**156 feature / 181 placed_feature**（tree/ore/simple_block/vegetation_patch），**全部 129 个 NS 群系**的 features 填回；
+  - **红杉林与高原地形实拍可见**（redwood_forest / blooming_highlands，截图存档）；
+  - **战利品 720 条、配方 826 条、成就 502 条**均实测生效（`/loot give`、`/recipe give`、`/advancement grant`）；
+  - 0 registry 错误、0 unbound、0 crash。
+- 已知降级：树冠/桩用 26.3 原版 placer（NS 自定义 placer 待反射注册还原）；`shoot_coconut` 成就因自定义 criterion 降级暂缺；删除了 jar 内自带 `resourcepacks/`（Paxi 会当 datapack 加载并污染 registry，需要时按 26.3 格式重建）。
