@@ -1,6 +1,6 @@
 # Release Notes —— skylands-262（MC 26.3 / Fabric 0.19.5 / Java 25）
 
-> 交付物：`work/run26/mods-stable`（**99 jar**，截至 2026-10-20；Miner's Delight 已并入，Abnormals Delight / No Void Structures 待并入）｜移植覆盖 99/110｜汉化 100%
+> 交付物：`work/run26/mods-stable`（**100 jar**，截至 2026-10-20；Miner's Delight + Abnormals Delight 已并入；+2 液体燃料兼容壳待并入 → 102）｜移植覆盖 101/110｜汉化 100%（zh-final2 已 promote）
 > 证据口径：每条「已验证」均来自游戏内 MCP 实测（player.getState / world.getBlock / chat.send / screenshot.take）。
 
 ## 核心
@@ -35,10 +35,19 @@
 - 创造栏：DP 19 物品、CEI 15 物品可见（01FAFE34… / 82EAB589…）。
 
 ## 流体（CEI / DragonsPlus）
-- CEI 26.3 流体注册（FluidEntry 直注册 still/flowing）已在 live（72880D90…），编译 0 错；DP 保持 live（01FAFE34…，新构建仅 fabric.mod.json 版本下限差异）。详见 docs/port-fluids-263.md。
+- CEI 26.3 流体注册（FluidEntry 直注册 still/flowing）已在 live（72880D90…），编译 0 错；MCP 实测 experience/blue_dye 两流体块 setblock+读回一致；DP 保持 live（01FAFE34…，新构建仅 fabric.mod.json 版本下限差异）。详见 docs/port-fluids-263.md。
+
+## 机械 / 交互
+- Create: Connected 1.3.3（reduced，37fec0a3…）：109 个 QoL 方块（齿轮箱/离合器/滑槽/风扇染料催化剂/copycat 系列等）纯外观注册 + 自建创造栏页签。MCP 实测：109 blocks 注册日志、10/10 setblock 读回一致、Missing model 0、0 crash、registry 0。
 
 ## 结构
-- No Void Structures 2.0.1（reduced 纯数据，c9aa748a…）：Lithostitched 结构覆盖；静态断言通过，游戏内验证启动/世界+/locate structure。虚空行为待浮空岛地图验证（详见 docs/port-no-void-structures.md）。
+- Sable x Create Crafts & Additions Compat 0.1.13（reduced，21c75509…）：跨 sable 子世界的接线渲染/断线逻辑（保留 10 class + 非致命 mixin：默认 defaultRequire 0）。MCP 实测：mod 列表加载、标题+世界可进、0 crash、0 registry；行为细节留手测。
+- Create: Hangars 1.0.0（reduced 纯数据，9bf2ea54…）：8 个 jigsaw 机库结构 + structure_set + template_pool（26.3 processor 包装与 blockstate 转换）。MCP 实测 /locate structure igcah:plains_hangar/birch_hangar/savannah_hangar 均返回坐标，tp 后实拍完整木构机库（条纹屋顶/大门/石柱），抽样方块 oak_planks。
+- Awakened Islands 1.0.0（reduced，4e14bc6f…）：浮空岛生成（原 sable schematic 改用 26.3 原版 StructureTemplate 路径）。MCP 实测 /sky262_islands spawn → 日志 loaded template 16x17x17、placed ok=true sampledNonAir=6，世界方块命中 levitite/andesite/tall_grass，截图可见雪原上空浮空岛；概率生成 1/4096 新 chunk。
+- No Void Structures 2.0.1（b3，b1712dbc…）：21 个结构覆盖 = 26.3 原版结构 body + Lithostitched delegating wrapper；MCP 实测 registry 0 / world OK / locate village_plains、pillager_outpost、swamp_hut 均返回坐标（虚空行为待浮空岛地图验证）。
+
+## 液体燃料兼容壳（占位，待行为移植）
+- `portable_engine_liquid_fuel` 2.0.0 / `createliquidfuel` 3.0.0：纯行为 addon（data_maps + mixin，无 assets/方块/物品），当前仅兼容壳；目标行为见 KNOWN-LIMITATIONS，排在用户手测反馈后的优化批次。
 
 ## 已知限制
 见 docs/KNOWN-LIMITATIONS.md。
