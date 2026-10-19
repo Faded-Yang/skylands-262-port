@@ -335,4 +335,6 @@ tools/launch26/launch.py        26.3 启动器（--watch-title / --timeout）
 ### natures_spirit（生物群系）—— 本轮打通
 - 编译 **0 错误**；数据层完成 26.3 schema 迁移（biome 必填 `features`(11 step)/`carvers`、effects 颜色字符串、旧 `{"Name","Properties"}` → `{"id","properties"}`、`configured_feature`→`feature` 目录、noise `firstOctave`→`base_octave`、placement `random_offset`→`offset`）；
 - **153 个 NS 生物群系可加载/可生成/可定位**（`/locate biome` 实测 3/3 命中，传送后地表正常）；
-- 暂缓（后续独立任务）：地形特征（feature/placed_feature 内容）、loot_table/recipe/advancement 的 26.3 重写（当前移除回落原版）。
+- **地形特征已恢复**：tree/ore 两类（107 feature + 133 placed_feature）在 `alpine_clearings`/`redwood_forest` 试点生效，实测红杉林成片生成；树形用 26.3 原版 placer（NS 自定义 placer 待反射注册后还原）。
+- **掉落表 720 + 配方 826 已恢复**：实测 `/loot give` 掉出白杨木台阶、`/recipe give` 解锁配方。
+- 暂缓：全量 153 群系的 features 填充（当前仅 2 个试点）、advancement（513 条待 26.3 重写）、NS 自定义 placer 的反射注册还原树形。
