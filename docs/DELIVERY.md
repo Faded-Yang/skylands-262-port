@@ -304,3 +304,30 @@ tools/launch26/launch.py        26.3 启动器（--watch-title / --timeout）
 2. 装饰/累积类 mod 每次构建后断言「旧 ids 是新 ids 的子集」、代码注册 key 必须存在于 blockstates；
 3. 手写 jar 必须包含目录条目，且方块/物品 Properties 必须先 setId；
 4. 只带「与已注册内容一致」的 data（否则会拖垮原版 tag 导致世界进不去）。
+
+---
+
+## 九、R560 收口（当前交付件 97 jar / 179 mod 项）
+
+### 装饰线定稿
+| 包 | 方块数 | 备注 |
+|---|---|---|
+| **createdeco** | **389/389** | 含门/活板门（两套 Half 映射）、placard/wedge/lamp/container 等；`Missing model=0` |
+| **Design-n-Decor** | **774/846** | 全可解析族完成；剩 velvet 32（缺 Create 座椅贴图，永久跳过）+ 杂项 40（casing/part/slope 等不再尝试） |
+
+共同验收基线：`Missing model for variant=0`、`Exception loading blockstate=0`、ids 只增不减、variant model 断言 problems=0、variant fix 幂等、lang 审计 0 坏文件。
+
+### 本轮新增/修复（用户可感知）
+- **食物**：Cultural Delights（26 方块/78 物品）、My Nether's Delight（47 方块/101 物品，powdery 木组已恢复）；
+- **任务书**：按钮/锁定提示/物品名全中文，图标不再出现「空气」；fallback 日志从 11286 条降到 2 条；
+- **语言大坑修根**：26.3 一次解析所有 mod lang，任一坏 JSON 会导致全部 mod 语言失效；已修 extruder zh_cn 缺逗号、createaddition vi_vn 控制字符，物品名/tooltip 恢复正常；
+- **sliceanddice**：切割砧真实行为（551 条配方，放入蛋糕产出 4 份切片）；
+- **aeroworks**：控制台面板 / 摇杆输入行为可用；
+- **createfix**：修复 Create `RuntimeDataGenerator` 在 26.3 下的 `CuttingRecipe→Holder` 崩溃（modded 木组跳过运行时切割配方生成，原版不受影响）；
+- **验证基础设施**：游戏内 MCP（截图/状态/放置/交互）+ 单实例启动锁，避免并发抢 GPU/端口。
+
+### 综合验收（97 jar，MCP 实测）
+- Create 基础方块（mechanical_press/cogwheel/shaft）放置读回 3/3；
+- physics_assembler 右键交互正常、拉杆渲染器注册；
+- throttle_lever 长按交互 60 tick 无崩溃；
+- 任务书中文、无语言加载失败；0 registry error、0 crash。
