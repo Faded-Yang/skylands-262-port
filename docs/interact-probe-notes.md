@@ -57,3 +57,37 @@ python _run.py --tag S-check --game-dir game-S-check --mods stage\<arm> --phase 
 - 只用 staging，**从不写 `mods-stable`**；
 - 跑完 `_run.py` 会杀进程树；确认 `Get-Process java`；
 - 默认 1280×720；截图需清晰。
+
+---
+
+## 6. MCP-first 验证规范（2026-10 起强制，替代反射探针作为主判据）
+
+交付件里的客户端 mod `sky262-mcp`（live 93 jar）会在进世界后于 `127.0.0.1:25576` 开 JSON-RPC WebSocket。优先用它做游戏内验证。
+
+### 启动与连接
+
+1. 用 live/staging 启动并**保持世界在线**（不要 PHASE_DONE 后退出世界，否则会返回 `Not in a world`）；
+2. 日志应出现 `[MCP] WebSocket server ready on port 25576`；
+3. 调用客户端（Node 24 自带 WebSocket）：
+
+```powershell
+node tools\mcp_fabric_client.mjs <method> '<json-params>' --port 25576 --out <截图目录>
+```
+
+### 方法（camelCase 为准；括号内为别名）
+
+| 用途 | 方法 |
+|---|---|
+| 玩家状态（坐标/血量/模式/主手） | `player.getState`（`get_player_state`） |
+| 截图（自动存 PNG） | `screenshot.take`（`take_screenshot`） |
+| 方块查询 | `world.getBlock` `{"x":..,"y":..,"z":..}` |
+| 放置/交互/移动/视角 | `player.placeBlock` / `player.interact` / `player.moveTo` / `player.lookAt` / `player.jump` |
+| 聊天/命令 | `chat.send` `{"message":"/give @s stone"}`（**不是 text**） |
+| 反射 | `reflect.invoke` / `reflect.getField` / `class.info`（最后手段） |
+
+### 验收规则
+
+1. 每个结论至少 1 张 `screenshot.take` 实拍，报告里写文件路径；
+2. 放置用 `player.placeBlock`，断言用 `world.getBlock` + `player.getState`；
+3. 只有 MCP 覆盖不到的（注册表反射 dump 等）才回退旧手段，并在报告注明；
+4. 旧反射探针仅保留为**批量遍历**工具（一次跑几十个 id 的场景），单点判定一律走 MCP。
