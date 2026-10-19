@@ -1,0 +1,44 @@
+# Release Notes —— skylands-262（MC 26.3 / Fabric 0.19.5 / Java 25）
+
+> 交付物：`work/run26/mods-stable`（**99 jar**，截至 2026-10-20；Miner's Delight 已并入，Abnormals Delight / No Void Structures 待并入）｜移植覆盖 99/110｜汉化 100%
+> 证据口径：每条「已验证」均来自游戏内 MCP 实测（player.getState / world.getBlock / chat.send / screenshot.take）。
+
+## 核心
+- 26.3 平台迁移：Block/Item Properties 全部 setId；旧 recipe/advancements 清除；手写 jar 用 tools/pack_jar.py 保目录条目。已验证：标题+进世界+0 crash。
+- 语言加载修复：26.3 一次解析全部 mod lang，任一坏 JSON 全局失效；修掉 extruder zh_cn 缺逗号、createaddition vi_vn 控制字符。已验证：无 Unable to load languages，全量 lang 审计 0 坏文件。
+
+## 装饰（1163 方块）
+- createdeco 389/389（4A08DE19…）：门/活板门/围栏/窗/牌匾/支撑楔/币堆等。已验证：black_placard / zinc_support_wedge[orientation=2] / blue_brick_stairs / andesite_trapdoor setblock+读回一致；Missing model=0、blockstate 异常=0。
+- Design-n-Decor 774/846（2FEEF8AB…）：齿轮/飞轮/大风扇/地砖/容器/展示板/灯。已验证：cogwheel 三轴 setblock+读回；Missing model=0。
+- 共同基线：ids 只增不减、variant 补齐幂等、解包断言 variant model 递归 parent 存在（problems=0）。
+
+## 食物 / 农业包
+- FarmersDelight refabricated + chefsdelight / corndelight / ends_delight 等。已验证：标题+进世界+物品在创造栏可见。
+- reduced 类：culturaldelights / minersdelight / mynethersdelight（assets+手写注册）。已验证：进世界 0 crash、物品可获取。
+
+## 任务系统（自研 sky262-quests 1.6.0）
+- J 键任务书、22 章 543 任务、提交/领取/锁定/奖励、进度存档、命令与结构化日志。已验证：按钮「关闭/提交/检查/领取」中文、锁定提示中文、描述多行可读、无「空气」图标。
+
+## 世界生成：natures_spirit
+- 153 个 NS 生物群系可生成/可定位（84B1C308…，B2）。已验证：/locate biome natures_spirit:redwood_forest 返回坐标并实拍巨型红杉林；blooming_highlands 实拍雪松/秋色/湖；地表 grass_block。
+- 数据完整：loot 720 + recipe 826 + advancement 502；MCP 实测 loot give 白杨木台阶、recipe give aspen_button、advancement grant alluaudia_bundle 全成功。
+- 地形特征：156 feature + 181 placed_feature，全 129 群系 features 填回。
+
+## 机械 / 交互
+- 挤出机：已验证 onSpeedChanged 0.0→-16.0、recipe matched sandstone。
+- Slice and Dice：551 条 cutting 配方加载，useItemOn+useWithoutItem 双 override；已验证切制交互可用。
+- 喷气背包：右键推力 60 tick、约 3 格/次；needsSync + ClientboundSetEntityMotionPacket；已验证推进位移与粒子。
+- 动力装载器 / 柴油发电机 43 方块 / 中央厨房：标题+进世界+方块可放置。
+
+## 工具与客户端
+- sky262-mcp（WS 25576）+ tools/mcp_fabric_client.mjs：getState/getBlock/chat.send/screenshot.take 全链路；多轮实拍截图留档（g33/mcp-shots）。
+- 创造栏：DP 19 物品、CEI 15 物品可见（01FAFE34… / 82EAB589…）。
+
+## 流体（CEI / DragonsPlus）
+- CEI 26.3 流体注册（FluidEntry 直注册 still/flowing）已在 live（72880D90…），编译 0 错；DP 保持 live（01FAFE34…，新构建仅 fabric.mod.json 版本下限差异）。详见 docs/port-fluids-263.md。
+
+## 结构
+- No Void Structures 2.0.1（reduced 纯数据，c9aa748a…）：Lithostitched 结构覆盖；静态断言通过，游戏内验证启动/世界+/locate structure。虚空行为待浮空岛地图验证（详见 docs/port-no-void-structures.md）。
+
+## 已知限制
+见 docs/KNOWN-LIMITATIONS.md。
