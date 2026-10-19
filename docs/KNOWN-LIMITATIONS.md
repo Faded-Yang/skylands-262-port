@@ -25,7 +25,7 @@
 - 中央厨房：机械臂×FD 联动为降级实现，ponder 未做。
 
 ## 流体（CEI / DragonsPlus）
-- CEI 流体注册已正确（live），游戏内流体块实拍验证待 probe。
+- CEI 流体注册已正确（live）；游戏内 `create_enchantment_industry:experience` setblock/读回已 PASS（探针实拍 `fluids_live.png`）。
 - DP 保持 live 旧件：新构建仅 create 依赖下限升至 >=6.0.9-4，live create 为 6.0.9-2 ⇒ 不可启动；不升级 create-fly（上游链风险）。
 
 ## 结构 / 世界生成
