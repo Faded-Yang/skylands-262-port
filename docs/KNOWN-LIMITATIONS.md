@@ -29,7 +29,12 @@
 - DP 保持 live 旧件：新构建仅 create 依赖下限升至 >=6.0.9-4，live create 为 6.0.9-2 ⇒ 不可启动；不升级 create-fly（上游链风险）。
 
 ## 结构 / 世界生成
-- No Void Structures 仅验证「数据加载 + 世界可进 + /locate structure 返回坐标」；结构不在虚空生成的目标行为待浮空岛地图验证。
+- Awakened Islands：岛用 vanilla StructureTemplate 直接 placed 到世界上空（玩家 +24 或新 chunk y=200），**不是 sable 物理 sublevel**，不会随浮空岛物理体系移动；概率/结构内容与原版一致（同 island1.nbt）；NeoForge Config 未移植（概率硬编码 1/4096）。
+- Sophisticated Backpacks / Storage（reduced）：物品图标为**扁平 item/generated**（原 mod 自定义 model loader/3D 动态渲染在 26.3 不存在，已统一降级），无紫黑；背包/存储方块与升级**纯外观**，无 GUI/无存储/无升级效果；不依赖 sophisticatedcore；8 个升级模块 item/generated 占位。
+- Create: Connected：109 方块**纯外观**（无 BlockEntity/无机械行为/无流体）；data 全丢（无配方/无 tag）；9 个 copycat 系列方块模型缺 → cube_all 近似；创造栏页签存在但 probe 未见截图（探针 tab 定位限制）。
+- Sable x Create Additions Compat：mixin 为 best-effort（`defaultRequire=0`，注入失败仅 WARN 不崩溃）；跨子世界接线行为未深度验证（手测项）；已丢弃目标缺失的 2 个 client mixin（LiquidBlazeBurner/WireNode）。
+- Create: Hangars：结构已可生成；**loot_table 已移除**（机库内箱子无战利品，细节押后）。
+- No Void Structures：已验证「数据加载 + 世界可进 + /locate structure 返回坐标（village_plains/pillager_outpost/swamp_hut）」；结构不在虚空生成的目标行为待浮空岛地图验证。
 - 浮空岛世界（aeronautics/sable）结构/地形仍降级：simulated 实体缺 EntityRenderer（honey_glue 首帧 NPE 历史问题）。
 
 ## 任务系统
@@ -40,3 +45,20 @@
 - 语言加载为全局硬依赖：任一 mod lang JSON 坏都会让所有 mod lang 失效（已修两处；新增件必须跑 tools/lang_audit.py）。
 - 26.3 worldgen 数据 schema 与 1.21 差异大（feature 平铺 / provider 数据化 / configured_feature 目录改名 / noise firstOctave→base_octave / placement random_offset→offset / blockstate id-properties），数据包类件必须按 docs/api-landmines.md 校验。
 - 所有件仅验证「标题 + 进世界 + 抽样 MCP」；未做长时稳定性/存档兼容/多人测试。
+
+## 液体燃料：portable_engine_liquid_fuel / createliquidfuel（占位，待行为移植）
+- 两件均为**纯行为 addon**（`data_maps/fluid/*.json` + mixin；无 assets/方块/物品）；当前交付为**兼容壳（shell）**，只保证 mod id/依赖/加载，**无任何数据或行为**。
+- `portable_engine_liquid_fuel` 2.0.0：目标行为 = simulated PortableEngine 熔岩罐 burn_time（lava 20000；super fuel 表），需 mixin 26.3 simulated；
+- `createliquidfuel` 3.0.0：目标行为 = Create BlazeBurner 流体燃料接入（liquid_fuel.json：lava/createaddition 油等），需 mixin 26.3 create-fly + 流体接入；
+- **验收口径**：仅加载/进世界/0 crash；无方块/物品可 give/setblock，不做功能判定。
+- 行为移植排在「用户手测反馈之后」优化批次，每项约 2 轮。
+
+## TFMG（The Factory Must Grow，reduced 分批）
+- 机器/BlockEntity/流体方块退化为**静态装饰方块**（无功能、无 BE、整块碰撞）；
+- recipe/loot/advancement/tags/worldgen 数据未恢复；复杂多状态方块合并为单默认 variant；
+- 分批累积件，旧 ids 只增不减；模型/贴图缺失按批统计，属 cosmetic。
+
+## sophisticated backpacks / storage（壳）
+- 背包/升级**无 GUI、无存储功能**（右键无反应）；storage 59 方块纯装饰、无 BE。
+- item 图标重建为 vanilla `item/generated`（原 mod 走自定义 model loader，26.3 无该 loader 会紫黑）；外观为扁平图标，非原 3D/dynamic 渲染。
+- 不依赖 sophisticatedcore（reduced 版手写注册，fmj 无 core 依赖）。
