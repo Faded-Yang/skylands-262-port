@@ -1,0 +1,6 @@
+# never commit game/mod binaries
+*.jar
+*.class
+work/
+screenshots/
+*.bak*

@@ -1,0 +1,810 @@
+{
+ "chapter.00C88361EDCC3B2A.title": "食谱",
+ "chapter.09E7201926EFE233.title": "军工载具",
+ "chapter.10CF8D53594C5B21.title": "固定翼",
+ "chapter.18F28F0D63315939.title": "你好，新蒸程！",
+ "chapter.1A4F4FEFA69506D5.title": "车辆载具",
+ "chapter.25858AAFC83D1615.title": "机械动力基础",
+ "chapter.287BA2CF807935D9.title": "储存",
+ "chapter.2B650370485D02F0.title": "烘焙",
+ "chapter.32D1B7641B3A8904.title": "造海中载具",
+ "chapter.3612760E13ACF3E1.title": "浮空车",
+ "chapter.37665C6188E1A6E8.title": "直升机",
+ "chapter.4C13B9DD07C86FB1.title": "控制篇",
+ "chapter.4F49C7C6E12E615A.title": "工程载具",
+ "chapter.53181AFCB6405EAA.title": "批量生产矿物",
+ "chapter.5B37EF04AA3C2848.title": "啤酒",
+ "chapter.62848D1F9B619A6E.title": "大飞艇",
+ "chapter.68522B40C4768E95.title": "造陆地载具",
+ "chapter.6A881152EF97FA04.title": "酒馆",
+ "chapter.74BE5C98B21375B7.title": "家具",
+ "chapter.784A70C90F6F5A49.title": "造空中载具",
+ "chapter.7C07A761EADF3908.title": "厨房",
+ "chapter.7D394B8378508CBB.title": "海上载具",
+ "chapter_group.18B92B6CD69F44D8.title": "空中载具",
+ "chapter_group.42DF9A8C445EFF86.title": "勤农暇事",
+ "chapter_group.485E071B353FF153.title": "自己造，才有成就感！",
+ "chapter_group.59418A0B4E6E90CF.title": "海上载具",
+ "chapter_group.6C5E761EA98BF3D2.title": "陆地载具",
+ "image.3DD3C11F2E258339.title": "点击跳转载具使用详情",
+ "quest.00138ECAB5AC3C40.quest_desc": [
+  ""
+ ],
+ "quest.00138ECAB5AC3C40.title": "直19黑旋风",
+ "quest.001D0C71E7865ADA.title": "开奶茶店",
+ "quest.002FD7CF5ADF6B13.quest_desc": [
+  "还是比较好获得的，悄悄告诉你，矿产那一章有很多刷怪笼哦"
+ ],
+ "quest.002FD7CF5ADF6B13.quest_subtitle": "来当飞机引擎不错哦，当然怎么用随你qwq",
+ "quest.002FD7CF5ADF6B13.title": "完成森罗酒馆系列任务可获得1个创造马达",
+ "quest.00843C4FC84EE6E5.quest_subtitle": "猜你想压铁板了",
+ "quest.014AC4DD9445A396.quest_subtitle": "可放置",
+ "quest.01654FC0571B9319.quest_subtitle": "按w思索",
+ "quest.01D8E6571AF1FB9F.title": "主世界饮品",
+ "quest.027084BB871EBD66.title": "大运",
+ "quest.027E7972194B5EE9.quest_desc": [
+  "&4使用遥控器&r&6右键车子右边座位的有俩天线的黄色半砖方块&r&2绑定遥控器&r"
+ ],
+ "quest.027E7972194B5EE9.title": "黑色赛车",
+ "quest.02C345C4465EC096.title": "交叉翼原型机",
+ "quest.031F2E1781CDA031.title": "米格",
+ "quest.03A8160834355350.quest_subtitle": "所有家电都有用电",
+ "quest.04004E14A52942BA.quest_subtitle": "啤酒可以在一个格内叠放3个",
+ "quest.04445930CC5C0897.quest_desc": [
+  "基本符合现实物理电，如果你已读完高中，那么可能对你来说不成问题。",
+  "果然初中还没读完那么你正好可以借助这个mod了解现实生活中的电路。"
+ ],
+ "quest.04445930CC5C0897.quest_subtitle": "难度较高的电力mod",
+ "quest.04552558A39E1841.quest_subtitle": "可放置",
+ "quest.04CB7D71D5D4EEB5.quest_subtitle": "驾驶火车",
+ "quest.0529BCD8E124D3CA.title": "包裹物流",
+ "quest.055DC04AE814B9A2.title": "小鱼直升机",
+ "quest.0585FA396B31976E.title": "导航结构",
+ "quest.05B44F5870E0616A.title": "J16",
+ "quest.05FE91B3D8DD5815.quest_desc": [
+  "飞艇过大",
+  "&4先备份存档",
+  "&r创造模式放置，并准备好相应的工具枪，调成删除结构模式，以应对突发意外"
+ ],
+ "quest.05FE91B3D8DD5815.title": "家园号",
+ "quest.06184B35244061A9.title": "歌利亚号",
+ "quest.067B5BBF8AA6C1EB.quest_subtitle": "可放置",
+ "quest.0692826B35FE928C.quest_desc": [
+  ""
+ ],
+ "quest.0692826B35FE928C.title": "参孙运输直升机",
+ "quest.0788E5B5E4FF2984.quest_subtitle": "压力山大",
+ "quest.0797A329EA8682D0.quest_desc": [
+  "飞艇过大",
+  "&4垫高10格放置&r",
+  "&4先备份存档",
+  "&r创造模式放置，并准备好相应的工具枪，调成删除结构模式，以应对突发意外"
+ ],
+ "quest.0797A329EA8682D0.title": "梦想家号",
+ "quest.08AA6ED767865521.title": "指挥艇",
+ "quest.08D0BBE3BC72A759.quest_desc": [
+  ""
+ ],
+ "quest.08D0BBE3BC72A759.title": "皮卡",
+ "quest.08F7CD0C49649696.title": "基地潜水艇",
+ "quest.0912652012CA74EF.quest_subtitle": "可放置",
+ "quest.09FD5B0B9E51D0B0.title": "鳐鱼",
+ "quest.0A374972CC69B9A0.quest_subtitle": "可放置",
+ "quest.0A46FF0CE1D9514E.quest_subtitle": "创造载具",
+ "quest.0AE1E0BFED08C657.quest_subtitle": "粉碎凝灰岩不错的选择",
+ "quest.0AFD6E36FB2A381E.quest_desc": [
+  ""
+ ],
+ "quest.0AFD6E36FB2A381E.title": "疣猪号战车",
+ "quest.0B2554F9274D3000.quest_subtitle": "够到了，倒进去",
+ "quest.0B71DD7F21BD41B8.quest_desc": [
+  "言昔时矮人技艺无双，",
+  "工匠们铸造无数宝藏，",
+  "铁锤落下，如钟回响，",
+  "响彻孤山下肃穆殿堂。",
+  "",
+  "山谷之中警钟声洪亮，",
+  "致命的烈焰来自北方，",
+  "枪矛如林却不敌死亡，",
+  "史矛革盘踞孤山宝藏。",
+  "",
+  "    或许可以找找那座叫“孤山”的山脉"
+ ],
+ "quest.0B71DD7F21BD41B8.quest_subtitle": "歌谣",
+ "quest.0BC0ECD7689390CE.quest_desc": [
+  "&a.预加载区块儿&r",
+  "&6/chunky center 0 0&r  （填写要预加载的区块中心这里以0 0 0坐标为例，不需要写y坐标）",
+  "&6/chunky radius 5000&r （将区块儿半径设置为5000）任意值都行",
+  "&6/chunky start &r        （开始生成）",
+  "&6/chunky confirm&r     （最后输入这个）回车就可以生成了",
+  "&6/chunky pause&r       暂停并保存生成进度",
+  "&a3.但是此时voxy还没同步，输入&r",
+  "&6/voxy import world \"新的世界/\"&r&b你的存档名字&r"
+ ],
+ "quest.0BC0ECD7689390CE.quest_subtitle": "你好，这位MC玩家qwq",
+ "quest.0BEA7C99610987C7.quest_subtitle": "简单的前期引擎",
+ "quest.0BF290CA0F54BC8E.quest_subtitle": "可放置",
+ "quest.0BFEF8CFC50D82E0.title": "轻型坦克",
+ "quest.0C10FBFA2BF9C7E4.quest_subtitle": "请长按w思索",
+ "quest.0C10FBFA2BF9C7E4.title": "机动电梯",
+ "quest.0C239DC78FC32AC1.quest_subtitle": "可放置",
+ "quest.0C61AF8E20856DAC.title": "巡洋坦克",
+ "quest.0DF667FDEDEAE513.quest_subtitle": "更好的开始！",
+ "quest.0DF667FDEDEAE513.title": "完结撒花",
+ "quest.0E15D244C00CE758.title": "挖掘机",
+ "quest.0EACCAE402CFB890.quest_desc": [
+  "创造游玩可以单击右侧铅笔图标，打开任务书编辑模式，然后右键想要完成的任务，单击快速完成。"
+ ],
+ "quest.0EACCAE402CFB890.title": "温馨提示",
+ "quest.0F3629F0C6B66922.quest_desc": [
+  "按住~连锁采集",
+  "按住“大写键”快速建造",
+  "按住ctrl 滚动滚轮可以缩放当前界面"
+ ],
+ "quest.0F6C6852BB56BCC9.quest_desc": [
+  "左手模具，右手裹馅面食，长按右键，制作生月饼"
+ ],
+ "quest.0F6C6852BB56BCC9.quest_subtitle": "ლ(´ڡ`ლ)好吃",
+ "quest.0FA4AF540898DC68.quest_desc": [
+  ""
+ ],
+ "quest.0FA4AF540898DC68.title": "大型客机",
+ "quest.10300E98C18749E9.quest_subtitle": "可放置",
+ "quest.104CF1E4971F11F1.title": "年泡泡飞艇",
+ "quest.116264E4EE62CF97.quest_desc": [
+  "在物理轴承前面放上任意方块儿，然后右键物理轴承，可以使前面的方块儿物理化，你可以继续在已经被物理化的方块儿上面继续放置其他方块儿。在物理轴承的后面通入应力。前面的物理结构会跟着旋转，旋转方向与通入应力的旋转方向相同"
+ ],
+ "quest.116264E4EE62CF97.quest_subtitle": "不如控制学的电机",
+ "quest.123BD091E85DAE02.quest_desc": [
+  "或者？制作气垫船？"
+ ],
+ "quest.123BD091E85DAE02.quest_subtitle": "大面积空间收集",
+ "quest.1245674AB4C5F5DF.quest_subtitle": "可放置",
+ "quest.12492C42DA95B2C5.title": "运5",
+ "quest.12ABF15DFD66345A.title": "玄武房车",
+ "quest.1362BF80B30A47C0.title": "末地饮品",
+ "quest.13F3CBBA730D83DF.title": "安山之心号炮艇",
+ "quest.147F6E5995AD769C.quest_subtitle": "可放置",
+ "quest.14C341D5600B60FA.title": "重型火炮",
+ "quest.1553A1DB854C4A04.quest_subtitle": "使用它们减小你的机械尺寸",
+ "quest.1553A1DB854C4A04.title": "批量处理",
+ "quest.15A078E2D693835C.quest_subtitle": "站上去炒菜高度刚刚好",
+ "quest.15A078E2D693835C.title": "厨娘凳",
+ "quest.15F26313B2A97290.quest_subtitle": "制造家具用",
+ "quest.160532EA67A38598.quest_subtitle": "做仓储，自动销毁必备",
+ "quest.16AA189E67B04D5E.quest_subtitle": "可放置",
+ "quest.1718BECCADBFA055.quest_desc": [
+  "&8煤炭块&r加&4岩浆&r进行辊压=&b钻石&r"
+ ],
+ "quest.1776E9E189057A48.title": "四驱飞车",
+ "quest.17C23017F712BC60.quest_subtitle": "杀猪取油",
+ "quest.18162C8FA1F6F39A.quest_desc": [
+  "&6将葡萄藤种植在底部方块为岩浆块或地狱岩的藤架上时，会收获这种作物。届时，藤架上生长的葡萄藤会变为橙色，而非普通葡萄藤的绿色。作物成熟后会倒挂在没有阻挡的水平藤架的下方。&r"
+ ],
+ "quest.183C0503B134414D.quest_desc": [
+  "做载具的第一步"
+ ],
+ "quest.183C0503B134414D.quest_subtitle": "造车车的流程",
+ "quest.183C0503B134414D.title": "造传动底盘",
+ "quest.1928A866F69B214F.title": "低空经济？",
+ "quest.1A542902DEBF348B.quest_desc": [
+  "&5美味的葡萄酒流出来了&r"
+ ],
+ "quest.1A542902DEBF348B.quest_subtitle": "安装在酒桶上",
+ "quest.1A61EC5C07F68CDF.quest_desc": [
+  "上图教你咋更改转向架类型"
+ ],
+ "quest.1A61EC5C07F68CDF.quest_subtitle": "手持本方块，按左alt选择转向架类型",
+ "quest.1A61EC5C07F68CDF.title": "制造列车",
+ "quest.1B6621731C969B04.quest_subtitle": "起飞！",
+ "quest.1BCEAA7B62E84FBE.quest_subtitle": "火焰喷射器",
+ "quest.1CC79D4E3469E40D.quest_desc": [
+  "寒雾自卡恩督笼罩而下，",
+  "阿塞丹的钟楼尽皆暗哑，",
+  "霜雾为息，寒冰为术，",
+  "安格玛巫王的恐怖爪牙。",
+  "",
+  "小心那片致命的雪地"
+ ],
+ "quest.1CC79D4E3469E40D.quest_subtitle": "传说",
+ "quest.1CDC2828B0A391EE.quest_desc": [
+  "使用安山合金右键，去皮原木就可以获得了",
+  "安山桶可以直接装取储罐中的流体"
+ ],
+ "quest.1CDC2828B0A391EE.quest_subtitle": "装饰传送带等传动方块",
+ "quest.1D4215C39195A874.quest_subtitle": "做汉堡咯",
+ "quest.1D4215C39195A874.title": "空岛汉堡店同款？",
+ "quest.1D8FCCC7C46F3B94.quest_subtitle": "也能当轮子，不颠簸",
+ "quest.1D8FCCC7C46F3B94.title": "这些也是轮子？！",
+ "quest.1DE2FBE0CB03CD01.quest_desc": [
+  ""
+ ],
+ "quest.1DE2FBE0CB03CD01.title": "军用卡车",
+ "quest.1E498E79BD4D58B1.quest_desc": [
+  "创造游玩可以单击右侧铅笔图标，打开任务书编辑模式，然后右键想要完成的任务，单击快速完成。"
+ ],
+ "quest.1E498E79BD4D58B1.title": "温馨提示",
+ "quest.1E5CD572EDF171D5.quest_subtitle": "放到地上然后破坏掉",
+ "quest.1E907D25A3C4B218.quest_subtitle": "可放置",
+ "quest.1F5939479A4BB9D6.quest_subtitle": "前期多做一点吧，早晚都要用",
+ "quest.1F5939479A4BB9D6.title": "传动原件",
+ "quest.1F74719E8E87A936.title": "连接物理结构",
+ "quest.1FFE928985BC2071.quest_subtitle": "用来挂厨具",
+ "quest.20B9CDB6A1FA499A.quest_subtitle": "雨天晚上，来上这么一碗，滋润~",
+ "quest.20B9CDB6A1FA499A.title": "煲汤喝喝",
+ "quest.21E134CD6F59F5DE.quest_desc": [
+  ""
+ ],
+ "quest.21E134CD6F59F5DE.title": "小吉普车",
+ "quest.21E97C5E847BF8C5.quest_subtitle": "可放置",
+ "quest.222F3622E7196633.quest_subtitle": "可放置",
+ "quest.225B19FDD43E8815.quest_subtitle": "可放置",
+ "quest.23884B4FE5C227D9.title": "下馆子",
+ "quest.23E4848B8A5ECD5F.quest_desc": [
+  ""
+ ],
+ "quest.241CA2591CBFD7AE.quest_desc": [
+  "&6R 换弹&r",
+  "&eG 检视&r",
+  "&6H 切换开火模式&r",
+  "&eZ 持枪趴下&r",
+  "&6C 持枪打开改装界面&r"
+ ],
+ "quest.241CA2591CBFD7AE.title": "枪匠！",
+ "quest.245468640787EE1D.title": "循风者号",
+ "quest.24CF64B644348B57.quest_subtitle": "可放置",
+ "quest.24EE843C9C223008.quest_subtitle": "粉碎下界砖块=下界合金碎片",
+ "quest.250D28DD324899CE.quest_subtitle": "可放置",
+ "quest.25E84686EC731CE7.title": "朱鸟高速飞船",
+ "quest.25FE3814091C0CA9.quest_desc": [
+  "请思索吸管"
+ ],
+ "quest.25FE3814091C0CA9.quest_subtitle": "做蒸汽炉的第一步",
+ "quest.2626D92B0D5A63F1.quest_subtitle": "没错那个mod就是我",
+ "quest.2659CD4DD10D5AC4.quest_subtitle": "可放置",
+ "quest.265B81D810558CC5.title": "机动飞艇",
+ "quest.269A9609C518FB5D.title": "家常小炒",
+ "quest.27B87B18221AEF4E.title": "气垫登陆船",
+ "quest.283C88D90E53BA1E.title": "探险车",
+ "quest.2880E3CDAF51DACA.quest_subtitle": "可放置",
+ "quest.2958A4893CA47AD8.quest_desc": [
+  "一定要研究一下这个零件，造车必备！",
+  "右边已经是时代的眼泪"
+ ],
+ "quest.2958A4893CA47AD8.quest_subtitle": "控制汽车前后行驶启动的核心零件",
+ "quest.2A51ED2EBB07FF5A.quest_desc": [
+  "既非生，亦非亡，",
+  "盔甲下皆是虚茫，",
+  "唯有王冠宣告着，",
+  "他曾是王，",
+  "沉寂在地狱殿堂。"
+ ],
+ "quest.2A51ED2EBB07FF5A.quest_subtitle": "传奇",
+ "quest.2A8F16C805512D3F.title": "烘焙面包",
+ "quest.2AEE85DE1805C711.title": "美西螈号潜水艇",
+ "quest.2AFC26DB0361C1F3.quest_subtitle": "可放置",
+ "quest.2B2404D8EFA2B217.quest_subtitle": "可放置",
+ "quest.2B3DC8FC73B93F10.quest_desc": [
+  "放在物理结构上，与船舵一起使用，就可以做简单的飞船了！"
+ ],
+ "quest.2B3DC8FC73B93F10.quest_subtitle": "提供升力",
+ "quest.2B40086F17EFDA48.quest_subtitle": "做转速控制器吧",
+ "quest.2B52F307C8ED8EAC.title": "战斗机",
+ "quest.2BE58474C83E9824.quest_subtitle": "锵！！！",
+ "quest.2BE58474C83E9824.title": "液压机？压力！",
+ "quest.2C0576E87C589E1E.quest_subtitle": "可放置",
+ "quest.2C459EAE17D9512A.quest_desc": [
+  "将悬挂控制器放在载具上面有传动杆的两面竖直放置。在另一边通入应力，车子悬挂高度会改变与旋转方向有关"
+ ],
+ "quest.2C459EAE17D9512A.quest_subtitle": "调节载具悬挂高度",
+ "quest.2D1D19EEBE952F13.quest_subtitle": "强大的高低机！",
+ "quest.2D1D19EEBE952F13.title": "仨",
+ "quest.2D5A072BB17E6FB6.title": "柠檬鲨  悬浮艇",
+ "quest.2E4E32252593CDD1.quest_desc": [
+  "飞艇过大",
+  "&4先备份存档",
+  "&r创造模式放置，并准备好相应的工具枪，调成删除结构模式，以应对突发意外"
+ ],
+ "quest.2E4E32252593CDD1.title": "锦鲤号",
+ "quest.2E9EAF732024FA97.quest_desc": [
+  "创造游玩可以单击右侧铅笔图标，打开任务书编辑模式，然后右键想要完成的任务，单击快速完成。"
+ ],
+ "quest.2E9EAF732024FA97.title": "温馨提示",
+ "quest.2ECDFE18E7D06813.quest_subtitle": "分流用的",
+ "quest.2F77B596E44C1449.quest_desc": [
+  "&2按住&r&2“&r&4~&r&2”&r&2键启用连锁采集&r",
+  "&9点击左侧图片可跳转到蓝图站，有海量的优秀蓝图供您选择&r！"
+ ],
+ "quest.2F77B596E44C1449.quest_subtitle": "欢迎来到，机械动力！",
+ "quest.2F77B596E44C1449.title": "哼着小曲，开着小车，悠哉~",
+ "quest.300E3270F75FD70D.quest_desc": [
+  "创造游玩可以单击右侧铅笔图标，打开任务书编辑模式，然后右键想要完成的任务，单击快速完成。"
+ ],
+ "quest.300E3270F75FD70D.title": "温馨提示",
+ "quest.30C28ADA002943BC.title": "飞轮车",
+ "quest.3102ADE58212879E.quest_desc": [
+  "可放置食物已标明"
+ ],
+ "quest.3102ADE58212879E.quest_subtitle": "板块是森罗物语：年味的所有美食",
+ "quest.31853E56D2F3CDF1.quest_desc": [
+  ""
+ ],
+ "quest.31853E56D2F3CDF1.quest_subtitle": "这是魔法粉碎",
+ "quest.31BC382B7F792CEF.quest_subtitle": "后期可选",
+ "quest.3252BEEC3407BE24.quest_subtitle": "可放置",
+ "quest.332DA457DF77B85E.quest_desc": [
+  "汽车左右两边的轮子要同向旋转吧"
+ ],
+ "quest.332DA457DF77B85E.quest_subtitle": "可自定义转向",
+ "quest.340EA5AB74311661.quest_desc": [
+  "前期的主要目标哦，先造一个全自动树场吧。"
+ ],
+ "quest.340EA5AB74311661.quest_subtitle": "做个全自动树厂怎么样？",
+ "quest.3424EA8C90751E20.quest_subtitle": "腌制",
+ "quest.34455C4A9ED5D4B0.quest_desc": [
+  "石头磨粉=砂砾",
+  "砂砾磨粉=沙子",
+  "沙子缠魂=灵魂沙",
+  "鼓风机前面放上灵魂营火=缠魂处理"
+ ],
+ "quest.34455C4A9ED5D4B0.quest_subtitle": "水洗灵魂沙=石英",
+ "quest.3482BF07A7C06BD1.quest_subtitle": "水管怎么用，这个就怎么用",
+ "quest.34D427A91BAA0DE9.quest_desc": [
+  ""
+ ],
+ "quest.34D427A91BAA0DE9.title": "机动附魔",
+ "quest.359CB2EBED455385.title": "曳空级",
+ "quest.365127FDE376BC16.quest_subtitle": "可放置",
+ "quest.3662EA1C50B108E8.quest_desc": [
+  ""
+ ],
+ "quest.3662EA1C50B108E8.title": "J50",
+ "quest.36FBAA59DE462027.quest_subtitle": "好茶~好茶~",
+ "quest.36FBAA59DE462027.title": "养生茶饮",
+ "quest.3703436D205BDE4B.quest_desc": [
+  "生存不给予兑换"
+ ],
+ "quest.3739D8716F660FE9.quest_subtitle": "创造载具",
+ "quest.379A7C7FB3A7C754.quest_subtitle": "强大的物理轴承！",
+ "quest.379A7C7FB3A7C754.title": "我",
+ "quest.37A38518936290F7.quest_desc": [
+  ""
+ ],
+ "quest.37A38518936290F7.title": "实用单翼飞机",
+ "quest.37E1F0E2186527C8.quest_desc": [
+  "通入应力就可以转了，按w思索"
+ ],
+ "quest.37E1F0E2186527C8.quest_subtitle": "放在物理化的结构上",
+ "quest.37E1F0E2186527C8.title": "造汽车",
+ "quest.37F6593C00335412.quest_subtitle": "抽取石油",
+ "quest.3832ED8C3B4A8353.title": "A7V重型坦克",
+ "quest.385634858C0C18CB.quest_desc": [
+  "设计：",
+  "b站up -Jx3-"
+ ],
+ "quest.385634858C0C18CB.quest_subtitle": "右键放置，请面向东方放置",
+ "quest.385634858C0C18CB.title": "固定翼滑翔机",
+ "quest.38B5113FDAB9097D.quest_subtitle": "创造载具",
+ "quest.393F6C499A8273B2.quest_subtitle": "创造载具",
+ "quest.3948AB7D4D23E63A.title": "bgx63",
+ "quest.3A5DD0D8D1306DDA.quest_subtitle": "配合辊压机，搅拌机一起用",
+ "quest.3A698CAF9AB20C63.quest_subtitle": "可放置",
+ "quest.3A9C4F8F8A0D81DA.quest_subtitle": "烧结",
+ "quest.3AD4B69D3A28E0D5.quest_desc": [
+  "&a没有独立的植株类型，是收获葡萄、冰葡萄、黄金葡萄时出现的副产物。是酿制两种干白酒的原材料。",
+  "",
+  "&r"
+ ],
+ "quest.3BA813FCFEFBF493.quest_desc": [
+  "哎？谁把我血条锁住了"
+ ],
+ "quest.3BA813FCFEFBF493.quest_subtitle": "这米饭有力气！",
+ "quest.3BA885A382A1E83D.quest_subtitle": "炼制汽油",
+ "quest.3BB0B425A8426F5B.quest_desc": [
+  "沙漠的旅人当小心为上，",
+  "赫鲁刚的枯骨白如霜月，",
+  "脚下的大地若微微震颤，",
+  "是死亡蛰伏苍茫的沙场。"
+ ],
+ "quest.3BB0B425A8426F5B.quest_subtitle": "故事",
+ "quest.3BBFA2BE07F7597D.quest_subtitle": "调整元件工作方式",
+ "quest.3BC82220E018AF4F.quest_subtitle": "可放置",
+ "quest.3BE8806545BE9A06.quest_subtitle": "创造载具",
+ "quest.3BE8806545BE9A06.title": "铁甲",
+ "quest.3BEC70FF01727146.quest_subtitle": "可放置",
+ "quest.3C3F85FDD91512BA.quest_subtitle": "可放置",
+ "quest.3D83927C0245F592.title": "刺身盛宴",
+ "quest.3D948D4BD3CC41AD.quest_subtitle": "可放置",
+ "quest.3E751EF08CF2EFE9.quest_subtitle": "黑板？",
+ "quest.3E751EF08CF2EFE9.title": "数据显示",
+ "quest.3E860E80D9B8FA7A.quest_subtitle": "新能源？",
+ "quest.3EB461AF4183A805.quest_subtitle": "来制造合金！",
+ "quest.3F08FB8CA84C5163.quest_subtitle": "耕地？铲除不完整方块",
+ "quest.3F89BCF334BFF097.title": "海蛾号",
+ "quest.3FA673D5E091DE69.quest_subtitle": "这不是盾牌，啊歪！",
+ "quest.3FA673D5E091DE69.title": "还挺结实",
+ "quest.40A424DF02685C52.quest_desc": [
+  "飞艇过大",
+  "&4先备份存档",
+  "&r创造模式放置，并准备好相应的工具枪，调成删除结构模式，以应对突发意外"
+ ],
+ "quest.40A424DF02685C52.title": "海旗鱼号",
+ "quest.40BD81DF57EA7AC4.quest_desc": [
+  "我们已经锁定到&e斯洛克沙虫的老巢&r"
+ ],
+ "quest.40C5F540D4C5C691.title": "更高级的热气球",
+ "quest.40CA3C066BAC8152.quest_desc": [
+  "使用盾构机将各种遗迹夷为平地？"
+ ],
+ "quest.40CA3C066BAC8152.quest_subtitle": "做个三防盾构机吧，bilibili有教程",
+ "quest.412CF297628E92D6.quest_subtitle": "可放置",
+ "quest.4137415C74D70572.quest_subtitle": "粉碎凝灰岩不错的选择",
+ "quest.41AAE6A97C794902.quest_subtitle": "创造载具",
+ "quest.41C3253CB85E7102.quest_desc": [
+  ""
+ ],
+ "quest.41C3253CB85E7102.title": "房车",
+ "quest.41CA55431FD8723D.quest_desc": [
+  "&2建议直接点击左边观看教学视频&r"
+ ],
+ "quest.41CA55431FD8723D.quest_subtitle": "最难懂的一集",
+ "quest.4201C2EA6B7B578D.quest_subtitle": "用命名牌写字，还能和时钟同步？",
+ "quest.4201C2EA6B7B578D.title": "不错的文字显示器",
+ "quest.42694D8F7A802989.title": "QU-1潜艇",
+ "quest.4280693DE857894C.quest_subtitle": "我是铜的“锌”伙伴",
+ "quest.42CF5D90DD8C0105.quest_subtitle": "报告发现石油！",
+ "quest.42CF5D90DD8C0105.title": "勘探",
+ "quest.42DCABEE93EC24FD.quest_subtitle": "传动轻而易举",
+ "quest.43D3572968E745DF.title": "结合",
+ "quest.452DE8743A1EDDB2.quest_desc": [
+  "创造游玩可以单击右侧铅笔图标，打开任务书编辑模式，然后右键想要完成的任务，单击快速完成。"
+ ],
+ "quest.452DE8743A1EDDB2.title": "温馨提示",
+ "quest.4542F23614995F16.title": "黎明号",
+ "quest.4600C2739BD3E2ED.title": "独角鲸号",
+ "quest.4615EBF72B59141A.title": "魔蜥浮空车",
+ "quest.4665A7105EAD4CEA.quest_desc": [
+  ""
+ ],
+ "quest.4665A7105EAD4CEA.quest_subtitle": "造飞机提供动力",
+ "quest.466E34C2D3719C6E.quest_desc": [
+  "&z赫尔瓦，冥界骑士&r：&4地狱迎战&r"
+ ],
+ "quest.466E34C2D3719C6E.quest_subtitle": "一定要在下界领取本奖励，以便定位boss位置",
+ "quest.466E34C2D3719C6E.title": "地狱饮品",
+ "quest.4678713804568015.quest_desc": [
+  "为方便",
+  "生存模式制造和使用安装火炮",
+  "&2本整合包所有火炮均支持使用镐子挖掘收集，并且直接放置，即可自动连接为一个整体&r"
+ ],
+ "quest.4678713804568015.quest_subtitle": "坦克炮管",
+ "quest.46DBABCA7D64E10D.title": "K.A.F",
+ "quest.4723C462D3245D63.quest_subtitle": "这才是养老",
+ "quest.47F3DD867C444082.title": "三轮车",
+ "quest.480024036431C2C8.quest_subtitle": "分类用的和过滤网搭配更加",
+ "quest.485397A6F1EDD87D.quest_subtitle": "嗯，是时候消灭所有传动了",
+ "quest.485397A6F1EDD87D.title": "大月寸子",
+ "quest.48DD0FB4555B9FFC.title": "调香师",
+ "quest.4944D9C2FADA65AA.quest_subtitle": "将液体倒进去",
+ "quest.4965815AB121D261.title": "如有必要请使用网络接口自己设置过滤！！！",
+ "quest.49A12476DB4D6DB5.title": "悍马",
+ "quest.4A806E6DCE5336F3.quest_subtitle": "已过时的远程控制",
+ "quest.4AC615B25C668FB6.quest_desc": [
+  "用来做飞机的机翼，提供升力"
+ ],
+ "quest.4AC615B25C668FB6.quest_subtitle": "按w思索",
+ "quest.4ADEB944C2D9C17C.quest_subtitle": "可放置",
+ "quest.4AF87EC3AC051827.quest_subtitle": "砂砾+燧石+岩浆（辊压）=安山岩",
+ "quest.4B0E2AE89C875BDE.quest_desc": [
+  "将陀螺仪安装在载具上，在陀螺仪的下面通入应力，陀螺仪会将载具施加力并使载具与地面平行。施加的力与应力的大小成正相关"
+ ],
+ "quest.4B0E2AE89C875BDE.quest_subtitle": "扶正载具",
+ "quest.4B4CF422531E3434.title": "面包大亨",
+ "quest.4B5E41F25D0D4DE1.quest_subtitle": "注入液体",
+ "quest.4B7E1B10FFBA86A4.quest_subtitle": "线控打字机，载具控制真神",
+ "quest.4B7E1B10FFBA86A4.title": "控制车辆",
+ "quest.4B8EB93686270D0B.quest_desc": [
+  "放在已经物理化的方块上就出现履带了"
+ ],
+ "quest.4B8EB93686270D0B.quest_subtitle": "做坦克？",
+ "quest.4B8EB93686270D0B.title": "造坦克",
+ "quest.4BAACA0004F9FDE3.title": "肥肥鱼号飞船",
+ "quest.4C5483463AA8427E.quest_subtitle": "可放置",
+ "quest.4CACBA3AB16D0567.title": "瓦基轮子",
+ "quest.4D0A1CE5EA08EEB1.quest_subtitle": "可放置",
+ "quest.4D4EEFAF9DEB9C77.quest_desc": [
+  "&4请不要在生存存档里直接建造物理载具！&r",
+  "&6先在创造存档中调试，确保没有bug再在生存存档中复刻！&r",
+  "&e注意一定要在物理结构上放置指路石！&r"
+ ],
+ "quest.4D4EEFAF9DEB9C77.quest_subtitle": "绑定更多按键",
+ "quest.4D89EFBF6B213B96.quest_subtitle": "是辣条吗？",
+ "quest.4D8A9353F3AC6A7B.quest_desc": [
+  ""
+ ],
+ "quest.4D8A9353F3AC6A7B.title": "实用双翼飞机",
+ "quest.4DA6D05D75816E83.title": "蒸馍馍吃包子",
+ "quest.4DF56692EB46E712.title": "流浪地球运输车头",
+ "quest.4F838BF1D397188C.quest_subtitle": "请长按w思索",
+ "quest.4F8509C34149A9E7.quest_subtitle": "配合动力臂有奇效（坦克自动装填）",
+ "quest.503B5C53A9CA46DA.title": "猎犬A型装甲车",
+ "quest.50A49DAF087CABB2.title": "特色？对！",
+ "quest.51243158BEE78DC1.title": "步战车",
+ "quest.5128C291229A4140.title": "洛笙双翼战斗机",
+ "quest.517660F1B740DD00.quest_subtitle": "火药制造商",
+ "quest.517BC6E38A738830.title": "先驱号",
+ "quest.5198F73E3FC7C7D8.quest_subtitle": "做几级的炉子呢？",
+ "quest.51F5EE1324C4B57E.quest_subtitle": "粉碎凝灰岩不错的选择",
+ "quest.52485CF54BC7D11A.quest_desc": [
+  "酿造的主要原料之一。",
+  "将葡萄藤种植在底部方块为泥土、草方块、缠根泥土、泥巴、灰化土、菌丝体的藤架上时，会收获这种作物。作物成熟后会倒挂在没有阻挡的水平藤架的下方。",
+  "",
+  "&a空手收获时会获得1-2个普通葡萄，有一定概率获得1个青提葡萄",
+  "&a使用剪刀收获时会获得2-3个普通葡萄，有一定概率获得1-2个青提葡萄&r&r"
+ ],
+ "quest.52A79647B08C685A.quest_desc": [
+  "创造游玩可以单击右侧铅笔图标，打开任务书编辑模式，然后右键想要完成的任务，单击快速完成。"
+ ],
+ "quest.52A79647B08C685A.title": "温馨提示",
+ "quest.52E95B7A590BAE00.quest_subtitle": "可放置",
+ "quest.5300F910994AD757.quest_desc": [
+  "右键组装船你就可以轻松驾驶了就是有点慢"
+ ],
+ "quest.5300F910994AD757.quest_subtitle": "造船，飞船，首选",
+ "quest.5300F910994AD757.title": "造飞艇",
+ "quest.5316D832A3E23375.quest_subtitle": "可放置",
+ "quest.535D39AF626480CC.quest_subtitle": "可放置",
+ "quest.53EDD34C46FA32BC.quest_subtitle": "做蛋糕，面包喽",
+ "quest.53EDD34C46FA32BC.title": "蛋糕师就位",
+ "quest.54323E0AA546064D.quest_desc": [
+  "以便进一步加工蛋糕"
+ ],
+ "quest.54323E0AA546064D.quest_subtitle": "手持面包面团右键烘焙台",
+ "quest.54323E0AA546064D.title": "和面团",
+ "quest.54C3625ED6BE3061.quest_subtitle": "可放置",
+ "quest.5526DED42EC4192C.quest_subtitle": "手持果酱右键蛋糕胚",
+ "quest.555BAD0ED8BF32D1.quest_subtitle": "信息时代？",
+ "quest.555BAD0ED8BF32D1.title": "万物互联",
+ "quest.55695BB0689DA42D.title": "终于可以开飞机喽",
+ "quest.55D8F88A98690682.quest_subtitle": "手持果酱右键蛋糕胚",
+ "quest.55FB85A4D5ACE648.quest_subtitle": "可放置",
+ "quest.56244104D9DEFC5C.title": "飞控",
+ "quest.56A894829E5A2771.quest_subtitle": "你一定要看看",
+ "quest.56A894829E5A2771.title": "新的传动方式！",
+ "quest.56CDEE235EB431C0.quest_subtitle": "已上岸",
+ "quest.577D6D40DC96E56E.quest_desc": [
+  "做自动化农场必备，现在有了航空学可以做联合收割机了"
+ ],
+ "quest.577D6D40DC96E56E.quest_subtitle": "收割小麦？其他的可以吗？",
+ "quest.57EAD3903FCE2C4C.quest_subtitle": "制作零部件",
+ "quest.57EDF1B65C481C48.quest_desc": [
+  "&4使用遥控器&r&6右键车子右边座位的有俩天线的黄色半砖方块&r&2绑定遥控器&r"
+ ],
+ "quest.57EDF1B65C481C48.title": "粉色赛车",
+ "quest.58A58B81C8B8A602.quest_subtitle": "可放置",
+ "quest.58C127081BAFF643.quest_subtitle": "可放置",
+ "quest.58EC5C58480B1406.title": "浇筑",
+ "quest.591CA26789BBF3C4.quest_desc": [
+  "生存不给予兑换"
+ ],
+ "quest.591CA26789BBF3C4.quest_subtitle": "创造载具",
+ "quest.59303F3C93D31CBC.quest_subtitle": "简单好用的电网",
+ "quest.59303F3C93D31CBC.title": "机动电力",
+ "quest.594B18BB09E95924.title": "米饭大仙",
+ "quest.5979B2496DF7D057.title": "冲锋艇",
+ "quest.59DE30DD10819FA8.quest_subtitle": "可放置",
+ "quest.5A295E7485BEC38E.quest_subtitle": "过于昂贵",
+ "quest.5AEEB8459F040895.title": "开奶茶店",
+ "quest.5B1652F50E3E34CA.quest_subtitle": "可放置",
+ "quest.5B45106EF320ABB2.quest_subtitle": "可放置",
+ "quest.5B54F3A8DDB873FA.quest_subtitle": "可放置",
+ "quest.5B6B8FFA4D62DB00.quest_subtitle": "更快的驾驶",
+ "quest.5BE1D5D2B0D98918.quest_subtitle": "装饰管道",
+ "quest.5C8BE542897F046C.quest_subtitle": "一应俱全",
+ "quest.5CF102487A4B0401.quest_subtitle": "可放置",
+ "quest.5CF43D422A5015F7.title": "斯堪尼亚",
+ "quest.5D1E55126F2937D4.quest_desc": [
+  "生存不给予兑换"
+ ],
+ "quest.5D1E55126F2937D4.quest_subtitle": "创造载具",
+ "quest.5D4ECAEA92EA925E.quest_subtitle": "旁边俩我兄弟",
+ "quest.5D4ECAEA92EA925E.title": "们",
+ "quest.5DF44CAA1670C2CA.title": "钻孔",
+ "quest.5E0817E5C707248D.quest_desc": [
+  "手持右键启用空间维度储存，再也不用担心背包空间不够了"
+ ],
+ "quest.5F23A441EDEE0BDA.quest_desc": [
+  ""
+ ],
+ "quest.5F23A441EDEE0BDA.quest_subtitle": "&b水洗&r&7砂砾&r=&f铁粒&r",
+ "quest.5F9E9900C12EE80D.quest_subtitle": "小体积引擎",
+ "quest.5F9E9900C12EE80D.title": "比柴油引擎方便",
+ "quest.5FD3B835BC2E6AF8.quest_desc": [
+  "注意襟翼轴承的摆放方向是固定的，使用前确保载具与之匹配，与后面的襟翼配合，使用机械动力强力胶粘在一起"
+ ],
+ "quest.5FD3B835BC2E6AF8.quest_subtitle": "按w思索",
+ "quest.5FD91C49C4593B80.quest_subtitle": "可放置",
+ "quest.5FEDF7D00316DFEE.quest_desc": [
+  ""
+ ],
+ "quest.5FEDF7D00316DFEE.quest_subtitle": "粉碎凝灰岩不错的选择",
+ "quest.608EE14326F8AD10.quest_subtitle": "用来交易香料",
+ "quest.60AAD87DEA6E2E96.quest_subtitle": "可放置",
+ "quest.6121267D6009EC14.title": "斯巴鲁",
+ "quest.613A008E8B5C54E1.quest_subtitle": "向着自动化进发",
+ "quest.615E94955BB4D1C9.quest_desc": [
+  "创造游玩可以单击右侧铅笔图标，打开任务书编辑模式，然后右键想要完成的任务，单击快速完成。"
+ ],
+ "quest.615E94955BB4D1C9.title": "温馨提示",
+ "quest.618AFBFCF3D503FF.quest_subtitle": "可放置",
+ "quest.633D2AF763180A8A.quest_desc": [
+  "&4阿什洛德，炼狱飞龙&r：&1我就在这高塔之上&r"
+ ],
+ "quest.633D2AF763180A8A.quest_subtitle": "已经定位到阿什洛德的位置",
+ "quest.633D2AF763180A8A.title": "全能农夫",
+ "quest.63883401BDF609D5.quest_desc": [
+  "前期就可以搓，一定要趁早哦，现在鼓风机可以当引擎了为飞船提供动力了，配合分散网更佳qwq''"
+ ],
+ "quest.63883401BDF609D5.quest_subtitle": "按w思索一下吧",
+ "quest.63883401BDF609D5.title": "批量熔炼,机械动力NB",
+ "quest.63932CB9E8866DC1.quest_desc": [
+  "放在物品栏1小时会变稳定（但是你也不想等一个小时吧）"
+ ],
+ "quest.63932CB9E8866DC1.quest_subtitle": "带在身上慢慢变得稳定",
+ "quest.6447E70702DCDB05.quest_subtitle": "火枪！",
+ "quest.646BCD561CA5CA6C.title": "风火轮",
+ "quest.64A2EA2A5A78C201.quest_desc": [
+  ""
+ ],
+ "quest.64A2EA2A5A78C201.title": "小鸟直升机",
+ "quest.64F7FB634BFA5082.quest_subtitle": "下界岩+岩浆+燧石=红石",
+ "quest.670A602F6CA4093D.quest_subtitle": "可放置",
+ "quest.685023B8B17482A4.quest_desc": [
+  ""
+ ],
+ "quest.685023B8B17482A4.quest_subtitle": "航空学轮子",
+ "quest.685023B8B17482A4.title": "轮子",
+ "quest.688E451A81E46838.quest_subtitle": "前进！黄铜科技",
+ "quest.68E9486498A5AC26.quest_subtitle": "可放置",
+ "quest.6936458D8A8BFEDC.quest_subtitle": "啤酒右键使用香料调味",
+ "quest.69C48AD2F925DC9B.quest_desc": [
+  "创造游玩可以单击右侧铅笔图标，打开任务书编辑模式，然后右键想要完成的任务，单击快速完成。"
+ ],
+ "quest.69C48AD2F925DC9B.quest_subtitle": "温馨提示",
+ "quest.69C48AD2F925DC9B.title": "这才是生活",
+ "quest.6B7AF303F936718D.title": "联合收割机",
+ "quest.6C4C2DA51E0F3A4F.title": "流浪地球运输拖挂",
+ "quest.6C76279D281E81EE.quest_subtitle": "这真的有用吗？呃呃呃",
+ "quest.6C76279D281E81EE.title": "完成喝啤酒啦系列任务可获得一个创造电池",
+ "quest.6C8D60A5BAA43ABA.quest_desc": [
+  "可放置食物已标明"
+ ],
+ "quest.6C8D60A5BAA43ABA.quest_subtitle": "森罗物语的所有美食",
+ "quest.6C8D60A5BAA43ABA.title": "森罗美食",
+ "quest.6CD01EA8B4EDB17C.title": "载具兑换第一期",
+ "quest.6CD9927ADE2DFABF.quest_subtitle": "拖拉机的启动方式？",
+ "quest.6CE8C98034EE861D.quest_desc": [
+  "让大家玩的舒服，收获快乐的时光，是我们共同的主题！"
+ ],
+ "quest.6CE8C98034EE861D.quest_subtitle": "bug反馈就修，长期更新维护",
+ "quest.6CE8C98034EE861D.title": "感谢有你",
+ "quest.6DC78C163D3C05C9.title": "小型越野车",
+ "quest.6DD62A7B5F5C9CFB.quest_desc": [
+  "请不要在&b维度网络内存在大量物品时&r&4使用机械动力漏斗或溜槽&r&e过滤输出&r！！！！",
+  "",
+  "他们每时每刻都在轮询检查网络内物品是否符合过滤条件，会造成极为严重的卡顿！！！",
+  "",
+  "如果有必要，请务必使用网络接口自行设置过滤而非网络通道！"
+ ],
+ "quest.6DD62A7B5F5C9CFB.title": "这么做是非常愚蠢的！会造成严重掉刻！",
+ "quest.6EDB144D4DD5883C.quest_subtitle": "吃冰啦~",
+ "quest.6EE7245CA60F0B1C.quest_subtitle": "先搞一个轨道工厂吧",
+ "quest.6F915AEA2D3293A7.quest_desc": [
+  "            &6驱动工艺移植版&r！"
+ ],
+ "quest.6F915AEA2D3293A7.quest_subtitle": "瓦尔基里时代的经典模组，造坦克必备",
+ "quest.6F915AEA2D3293A7.title": "是的孩子们，我回来了！",
+ "quest.6F92735BBCE7F811.title": "离子-多功能支援机",
+ "quest.6F941A97CDE88714.title": "蒸汽船",
+ "quest.717C16AE6516D4A4.quest_desc": [
+  "羊毛可以代替风帆哦，记得用强力胶连接"
+ ],
+ "quest.717C16AE6516D4A4.quest_subtitle": "梦开始的地方",
+ "quest.717C16AE6516D4A4.title": "请选择你的动力源",
+ "quest.71920046ED11350A.quest_desc": [
+  "&b葡萄藤种植在底部方块为冰块、浮冰、蓝冰、雪块的藤架上时，会收获这种作物。届时，藤架上的葡萄藤会呈现出青蓝色而非一般葡萄藤的绿色。作物成熟后会倒挂在没有阻挡的水平藤架的下方。&r"
+ ],
+ "quest.71A8CD17950F9E7E.quest_subtitle": "聪明的你一定知道干啥用的吧qwq",
+ "quest.71A8CD17950F9E7E.title": "还是热气球惬意",
+ "quest.7289D80A3E172CC1.quest_subtitle": "酒狐好馋~",
+ "quest.72961CDCE5FC1041.quest_subtitle": "已过时的远程控制",
+ "quest.72CAC7E15413A448.quest_subtitle": "可放置",
+ "quest.73543D9543DDFFC6.quest_desc": [
+  ""
+ ],
+ "quest.73543D9543DDFFC6.title": "越野",
+ "quest.73CAF74D3D7999E9.quest_desc": [
+  "合成大家伙"
+ ],
+ "quest.73CAF74D3D7999E9.quest_subtitle": "自动合成",
+ "quest.73F1744E445233BD.quest_subtitle": "手持果酱右键蛋糕胚",
+ "quest.73F229220406F82B.quest_desc": [
+  "手持油壶并右键炒锅就可以消耗 1 个油脂并加入炒锅中。",
+  "",
+  "手持油脂右键油壶可以将其放入油壶，空手右键油壶则可以取出其中容纳的油脂"
+ ],
+ "quest.73F229220406F82B.quest_subtitle": "存放油脂",
+ "quest.740CCE842E1BC587.quest_desc": [
+  ""
+ ],
+ "quest.740CCE842E1BC587.title": "炮艇",
+ "quest.74132B5A0263C55F.title": "99A主战坦克",
+ "quest.7526A565C0A28700.quest_subtitle": "可放置",
+ "quest.752D0C3E34CF768A.quest_desc": [
+  "要好好规划哦"
+ ],
+ "quest.752D0C3E34CF768A.quest_subtitle": "六边形任务获得",
+ "quest.752D0C3E34CF768A.title": "完成指定任务共可获得9个创造烈焰人蛋糕",
+ "quest.7589AF2EE240DB2D.quest_subtitle": "可放置",
+ "quest.75CB54C4F4449DAB.quest_desc": [
+  "零部件右键就可以安装。注意要先放车身"
+ ],
+ "quest.75CB54C4F4449DAB.quest_subtitle": "组装车辆",
+ "quest.76166EFB69F07623.title": "蝎尾师浮空车",
+ "quest.766B68948171FF6D.title": "打火石点火",
+ "quest.76992B57A7C0CA9D.quest_desc": [
+  "使用jei思索便可以找出&6量产路线&r，（本质还是&4刷石&r生万物）&e你将会获得不错的奖励",
+  "&r",
+  "&l&8粉碎凝灰岩有惊喜&r&r&n"
+ ],
+ "quest.76992B57A7C0CA9D.quest_subtitle": "尝试着建造属于你自己的工厂吧",
+ "quest.76992B57A7C0CA9D.title": "本章节中的所有矿物均可以量产",
+ "quest.76D0C20B537C9C42.quest_desc": [
+  "生存不给予兑换"
+ ],
+ "quest.76D0C20B537C9C42.quest_subtitle": "创造载具",
+ "quest.7781B0EBEF671F25.quest_desc": [
+  "按住shift右键取出"
+ ],
+ "quest.7781B0EBEF671F25.quest_subtitle": "手持物品右键，扔入垃圾桶",
+ "quest.77CDE151FE2A1AEA.quest_subtitle": "可放置",
+ "quest.7818FB2BE5D56A74.title": "拖拉机",
+ "quest.782A95F504EB6271.quest_subtitle": "不只是磨粉这么简单",
+ "quest.78D61226CE311D56.quest_subtitle": "新手十连抽",
+ "quest.7942A6A571A4C5EB.quest_subtitle": "请按w思索",
+ "quest.795201F41C9B6440.quest_desc": [
+  "&8原石&r+&8磨粉&r=&8沙砾&r，&8沙砾&r+&3鼓风机水洗&r=&f铁粒&r，&4恭喜你发明了自动炼铁机&r"
+ ],
+ "quest.795201F41C9B6440.quest_subtitle": "我想应该搞一个炼铁厂",
+ "quest.79BA1404896DE5B5.quest_subtitle": "可放置",
+ "quest.7A48779C75C91621.quest_subtitle": "小型载具必备",
+ "quest.7A48779C75C91621.title": "关节控制",
+ "quest.7A655F9DDF4C1260.title": "烘焙大师",
+ "quest.7AF0AB2628E0844E.quest_subtitle": "请长按w思索",
+ "quest.7AFDA554F6AC34C8.quest_desc": [
+  ""
+ ],
+ "quest.7AFDA554F6AC34C8.title": "重型运输车头",
+ "quest.7BB39C6127388F5E.quest_subtitle": "可放置",
+ "quest.7C7E4E5E1AE2DEBB.title": "红石科技",
+ "quest.7C98BF312AFB3574.quest_subtitle": "可放置",
+ "quest.7CD0622AAF4B16EF.title": "季风号",
+ "quest.7D563A1869E70BD3.quest_subtitle": "可放置",
+ "quest.7DACC003572CA6F1.quest_subtitle": "可放置",
+ "quest.7DC45728D9009289.quest_subtitle": "可放置",
+ "quest.7E1DB6C695415315.quest_subtitle": "做自卸卡车用的？",
+ "quest.7EC12054FF9674E6.quest_subtitle": "可放置",
+ "quest.7F15BA694CB114C8.title": "FV44",
+ "quest.7F974A27FBC6E96A.quest_subtitle": "挂档，加速！！",
+ "quest.7FCE8D7D8BD505F6.title": "黑弯刀",
+ "task.04B293F4C88638E0.title": "不要跨物理结构使用电线",
+ "task.1BF54FD1E2C657FF.title": "欢迎来到新“蒸”程",
+ "task.1F406BFF6DF52729.title": "连锁采集",
+ "task.3058D63AFD07B492.title": "按下M打开世界地图",
+ "task.3C39A43D02E6A91F.title": "必看",
+ "task.3D1FB1279C41773F.title": "不要用机械手给喂食槽添加种子",
+ "task.54017117A8EA9569.title": "国味美食",
+ "task.636B7139CE20622F.title": "生产火炮",
+ "task.73DFE4565226AA06.title": "按B可以打开精妙背包",
+ "key.sky262quests.open": "打开任务书"
+}

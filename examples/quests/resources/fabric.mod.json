@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "sky262quests",
+  "version": "1.0.0",
+  "name": "Sky262 Quests",
+  "description": "Native Fabric quest book for the skylands-262 modpack.",
+  "authors": ["skylands-262"],
+  "license": "ARR",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["sky262quests.Sky262Quests"],
+    "client": ["sky262quests.client.Sky262QuestsClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": ">=26.3-",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}
