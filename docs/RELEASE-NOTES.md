@@ -37,7 +37,7 @@
 - 创造栏：DP 19 物品、CEI 15 物品可见（01FAFE34… / 82EAB589…）。
 
 ## 汉化（CEI 思索界面）
-- CEI（cf037d0b…）：zh_cn 原为英文复制（假汉化），已用 1.21.1 原包真实中文按 key 合并（335/336 键）+ 手译 1 键；另把源码中 181 处硬编码 ponder/GUI 英文文本（scene.title/scene.text 字面量）替换为中文并重编译（0 errors）。
+- CEI（a2c510b3…）：ponder 15 个场景 nbt 完成 26.3 palette 迁移（Name/Properties→id/properties，缺失会导致场景全空）；zh_cn 原为英文复制（假汉化），已用 1.21.1 原包真实中文按 key 合并（335/336 键）+ 手译 1 键；另把源码中 181 处硬编码 ponder/GUI 英文文本（scene.title/scene.text 字面量）替换为中文并重编译（0 errors）。
 - 已知降级：ponder 3D 场景渲染依赖 live create-fly（R421 修复，未改动）；我方仅做文本汉化，不改渲染代码。
 
 ## 流体（CEI / DragonsPlus）
