@@ -30,7 +30,7 @@
 
 ## 结构 / 世界生成
 - Awakened Islands：岛用 vanilla StructureTemplate 直接 placed 到世界上空（玩家 +24 或新 chunk y=200），**不是 sable 物理 sublevel**，不会随浮空岛物理体系移动；概率/结构内容与原版一致（同 island1.nbt）；NeoForge Config 未移植（概率硬编码 1/4096）。
-- Sophisticated Backpacks / Storage（reduced）：物品图标为**扁平 item/generated**（原 mod 自定义 model loader/3D 动态渲染在 26.3 不存在，已统一降级），无紫黑；背包/存储方块与升级**纯外观**，无 GUI/无存储/无升级效果；不依赖 sophisticatedcore；8 个升级模块 item/generated 占位。
+- Sophisticated Backpacks / Storage（reduced）：storage 的桶/箱/decoration_table 等 49 个方块外观改为 vanilla cube 近似（原自定义 loader/Blockbench 形状不保留）；物品图标为**扁平 item/generated**（原 mod 自定义 model loader/3D 动态渲染在 26.3 不存在，已统一降级），无紫黑；背包/存储方块与升级**纯外观**，无 GUI/无存储/无升级效果；不依赖 sophisticatedcore；8 个升级模块 item/generated 占位。
 - Create: Connected：109 方块**纯外观**（无 BlockEntity/无机械行为/无流体）；data 全丢（无配方/无 tag）；9 个 copycat 系列方块模型缺 → cube_all 近似；创造栏页签存在但 probe 未见截图（探针 tab 定位限制）。
 - Sable x Create Additions Compat：mixin 为 best-effort（`defaultRequire=0`，注入失败仅 WARN 不崩溃）；跨子世界接线行为未深度验证（手测项）；已丢弃目标缺失的 2 个 client mixin（LiquidBlazeBurner/WireNode）。
 - Create: Hangars：结构已可生成；**loot_table 已移除**（机库内箱子无战利品，细节押后）。
@@ -62,3 +62,11 @@
 - 背包/升级**无 GUI、无存储功能**（右键无反应）；storage 59 方块纯装饰、无 BE。
 - item 图标重建为 vanilla `item/generated`（原 mod 走自定义 model loader，26.3 无该 loader 会紫黑）；外观为扁平图标，非原 3D/dynamic 渲染。
 - 不依赖 sophisticatedcore（reduced 版手写注册，fmj 无 core 依赖）。
+
+## ponder 入口：CEI `create:experience_nugget` 不可用（其余 6 个入口正常）
+
+- 现象：`/ponder create:experience_nugget` → 聊天回执 `No value present`，界面不打开；
+- 根因：`create_enchantment_industry/ponder/experience/{basic,advance,beacon_base}.nbt` 是 1.21.1 旧 block-entity 数据（Direction 存 int、枚举大写 ANDESITE/WAITING/PUNCH、旧 ItemStack `{Slot,count,id}`），26.3 `PonderSceneRegistry.compile` 放结构时 `ServerSidedFilteringBehaviour.read` 的 `Direction.CODEC` 解析失败 → `Optional.orElseThrow`；
+- 尝试过：palette 迁移（已生效，语言/方块显示恢复）、移除 141–146 处 `blocks[].nbt`（会另触发 StackOverflowError）；
+- 现状：保留原始 nbt；受影响仅该条目，`blaze_enchanter` / `super_experience_nugget` / `cogwheel` 等入口正常；
+- 后续可行路径：写完整的 1.21.1→26.3 block-entity NBT 转换（枚举小写、Direction int→string、旧 ItemStack→`{id,count,components}`），可复用 `tools/convert_121_data.py` 的映射表。
