@@ -207,12 +207,15 @@ everse-engineer-anything（REA），仅在用户点名后调用。
 ### 死路
 - ASM 把 `invokespecial BlockItem.updateCustomBlockEntityTag` 改 owner → `VerifyError: Bad invokespecial instruction`。
 - `@Mixin` 上非 private static 桥接方法 → `InvalidMixinException`（必须实例方法或 ACC_SYNTHETIC private static）。
-- 直接整类覆盖 live 反编译源码中依赖 `dev.eriksonn.aeronautics.compat` 的类 → 编译期找不到包；需在 build.gradle 加 aeronautics jar 依赖，或只手工补差异行。- **R513 · DnD batch8 出件**：累积 **417** 方块（357 + 60 axis-only：cogwheel/flywheel/fan/girder 等，`RotatedPillarBlock`），资源自检 **0 missing**、unresolved=[]；候选 `5d1089e2…`（3,626,129 B，4840 entries，staging `g86/stage/mods-dnd-b8`，92 jar = live 92）。batch7 `d1e56f2e…` probe PASS（cogwheel/flywheel/fan/girder 外观正常、不转属预期）。- **R514 · createdeco b9d（mesh_fence 类修正 + 属性自检）**：`*_mesh_fence` 的 blockstate 是 **wall 格式**（含 `up` 属性），原按 FenceBlock 注册 ⇒ `Unknown property 'up'`；改为 **WallBlock**；构建新增「blockstate 属性 ⊆ 方块 stateDefinition」自检（Variants + multipart when 收集，按类别白名单比较）：196/196 violations=0；候选 `e3c43370…`（1,019,076 B，1808 entries，staging `g82/stage/mods-createdeco-b9d`，92 jar）。
-## R510 · sky262-mcp 验证（2026-10-19 21:55）
-- **R516 · createdeco batch10/11 合并出件（累积 276）**：新增 `extra_ids.json` 机制 = 每批新增 id **追加累积**到该文件；b10 extras（placard15 + support6 + lamp19）+ b11 extras（support_wedge/coinstack/decal/corner+cracked red-umber-verdant 系列 40）= 80 extra + 196 = **276**；新增 **IntegerProperty 支持**（layers 1-8 / orientation 1-8，自定义字段）；自检升级：boolean→BooleanProperty、enum 白名单、墙 sides、int 属性；`PROPS CHECK 276/0`、注册顺序+覆盖 276/276；候选 `beebc508…`（1,227,887 B，2292 entries，staging `g82/stage/mods-createdeco-b11-final`，92 jar 冻结）。
-## R516 · MCP 别名版 PASS（2026-10-19 22:05）
 
-- 候选 `ec7a37d2`（167,013 B，base 92）：世界在线 + WS 25576；`get_player_state` 返回 name/uuid/health/pos/gameMode/mainHandItem；`take_screenshot`/`screenshot.take` 均写 PNG；
-- `chat.send` 参数是 `{"message":"..."}`（用 `text` 会 NPE）；
-- 热键栏「9 个品红」实为**空槽装饰**（紫黑 X），不是缺失模型；
-- 使用说明 `docs/mcp-fabric-mod.md` 已含真实方法名 + chat.send 参数。
+## 死路：重复推导「ponder 3D 场景」并改坏已修好的类（R660）
+
+**结论**：live create-fly 的 SceneRenderer.class (bccbedd6549a…, 14118B) + GpuFrameRunner.class (5af9c40a…, 16392B) 已经是 R421 修好场景那版（与 ponderfix5b 逐类相同，仅多 3 个 swing 兼容 mixin）；nbt 163/187 已是 26.3 id/properties。
+
+**死路**：fix7/fix8/fix9/fix10A/fix10B/fix11 把 live 的 SceneRenderer 换成「委托基类 / 空 renderToTexture / 品红测试」实验版，反而制造黑屏与 VerifyError（fix8 还因类名拼错 SceneRendererState 启动即崩）。
+
+**以后**：ponder 场景问题先按 docs/DELIVERY.md R421 行 + docs/fix-ponder-crash.md 核对；不要替换 live 的 SceneRenderer/GpuFrameRunner；先测 live 原样，再决定是否改。
+## R580 · 合件必须对 live 逐 jar 校验版本（2026-10-20 13:30）
+
+- g109 启动崩 `ClassNotFoundException: ConnectivityHandlerMixin`：staging 里 CEI 是旧版 216KB/221 entries；当前 live 是 818KB/467 entries；根因是合件时复制的旧 CEI 此后被别的 lane promote 成完整版；
+
