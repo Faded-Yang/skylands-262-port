@@ -12,7 +12,7 @@
 | 6 | 大量物品名显示 raw key | aero | ✅ | L1+L2 共 28 件已合并（createdeco/aeroworks/CEI/DP/createframed/NS/tfmg/ends_delight 等）；实测「黑色边框玻璃门/紫颂曲奇/安山岩门/黑色牌匾」全中文 |
 | 7 | 装饰门：半扇空心/极端视角消失 | crashfix | ✅ | port.21 已合并：放置出双半、右击 `open=true`、敲上半两半全 air |
 | 8 | 装饰牌匾：只能朝上放 | crashfix | ✅ | port.21：贴墙 `face=wall,facing=east` 通过（右键文本交互仍降级） |
-| 9 | 思索界面英文未汉化 + 渲染异常 | ponder | ✅ | CEI 汉化已合并；**live 原样实测 R421 场景可见**（白平台+齿轮 3D、中文）；黑屏是 fix7–fix11 实验件破坏所致，已全部丢弃（LEDGER 死路 R660） |
+| 9 | 思索界面英文未汉化 + 渲染异常 | ponder | ✅（中文）/🔍（场景对照中） | CEI 汉化 veriified：ponder 截图显示「思索……」「认识烈焰人附魔室」「通入液态经验来激活它」全中文；create:cogwheel 场景曾在 live 实测可见（R421）；CEI 场景与 cogwheel 对照实验进行中 |
 | 10 | culturaldelights 食物不能吃 | aero | ✅✅ | 40 项 FoodProperties；**mcpfabric 真实进食 PASS**：survival+降 hunger 后 `control.startUsing` 3.5s，avocado_toast food 13→17/sat 0→1.4 且物品被消耗；apple 对照 14→20 |
 | 11 | 装饰类只有栏杆符合要求，其余多数未测/不合格 | 持续 | 🔄 | 按用户后续反馈逐项修 |
 | 12 | 机械搅拌器（mixer）放置即崩 | crashfix | ✅ | 根因：`SmartBlockEntity.initialize()` 首 tick 才注册客户端行为；1.0.3 在 setLevel 时补注册，mixer/whistle/cuckoo 均 0 崩溃 |
