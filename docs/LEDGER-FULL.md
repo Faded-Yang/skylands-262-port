@@ -219,3 +219,4 @@ everse-engineer-anything（REA），仅在用户点名后调用。
 
 - g109 启动崩 `ClassNotFoundException: ConnectivityHandlerMixin`：staging 里 CEI 是旧版 216KB/221 entries；当前 live 是 818KB/467 entries；根因是合件时复制的旧 CEI 此后被别的 lane promote 成完整版；
 
+

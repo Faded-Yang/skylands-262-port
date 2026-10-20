@@ -6,6 +6,7 @@
 ## 核心
 - 26.3 平台迁移：Block/Item Properties 全部 setId；旧 recipe/advancements 清除；手写 jar 用 tools/pack_jar.py 保目录条目。已验证：标题+进世界+0 crash。
 - 语言加载修复：26.3 一次解析全部 mod lang，任一坏 JSON 全局失效；修掉 extruder zh_cn 缺逗号、createaddition vi_vn 控制字符。已验证：无 Unable to load languages，全量 lang 审计 0 坏文件。
+- **UTF-8 BOM 修复（2026-10-20）**：minersdelight `es_es.json` 带 BOM ⇒ 26.3 全量 mod lang 回退 en_us（表现为 ponder 标题/按钮/提示全部英文，而 jar 内 zh 正常）。已重打包为 `833d7333…`（仅该文件去 BOM，147,673 B；base `88e909f9…`）；`tools/lang_audit.py` 增加 BOM 扫描（live 114 jar/1053 lang files → BOM=0）。
 
 ## 装饰（1163 方块）
 - createdeco 389/389（4A08DE19…）：门/活板门/围栏/窗/牌匾/支撑楔/币堆等。已验证：black_placard / zinc_support_wedge[orientation=2] / blue_brick_stairs / andesite_trapdoor setblock+读回一致；Missing model=0、blockstate 异常=0。
