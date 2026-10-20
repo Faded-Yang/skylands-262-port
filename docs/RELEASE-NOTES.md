@@ -5,6 +5,7 @@
 
 ## 核心
 - 26.3 平台迁移：Block/Item Properties 全部 setId；旧 recipe/advancements 清除；手写 jar 用 tools/pack_jar.py 保目录条目。已验证：标题+进世界+0 crash。
+- create-fly `FluidStack.getMaxAmount()` ClassCastException 修复（31ff67d0…）：`getOrDefault` 返回 Optional 时 `(Integer)` cast 崩溃；同文件 3 处同类 cast（getName 的 PotionContents/BottleType）统一经 `FluidFix.unwrap/max` 处理；影响所有走 `FluidInventory.insert` 的机器/CEI 转移。实测 pondering experience_nugget 首帧 tick 0 CCE。
 - 语言加载修复：26.3 一次解析全部 mod lang，任一坏 JSON 全局失效；修掉 extruder zh_cn 缺逗号、createaddition vi_vn 控制字符。已验证：无 Unable to load languages，全量 lang 审计 0 坏文件。
 - **UTF-8 BOM 修复（2026-10-20）**：minersdelight `es_es.json` 带 BOM ⇒ 26.3 全量 mod lang 回退 en_us（表现为 ponder 标题/按钮/提示全部英文，而 jar 内 zh 正常）。已重打包为 `833d7333…`（仅该文件去 BOM，147,673 B；base `88e909f9…`）；`tools/lang_audit.py` 增加 BOM 扫描（live 114 jar/1053 lang files → BOM=0）。
 
@@ -37,7 +38,8 @@
 - 创造栏：DP 19 物品、CEI 15 物品可见（01FAFE34… / 82EAB589…）。
 
 ## 汉化（CEI 思索界面）
-- CEI（a2c510b3…）：ponder 15 个场景 nbt 完成 26.3 palette 迁移（Name/Properties→id/properties，缺失会导致场景全空）；zh_cn 原为英文复制（假汉化），已用 1.21.1 原包真实中文按 key 合并（335/336 键）+ 手译 1 键；另把源码中 181 处硬编码 ponder/GUI 英文文本（scene.title/scene.text 字面量）替换为中文并重编译（0 errors）。
+- CEI（5c0fdb9b…）：ponder `experience/{basic,advance,beacon_base}` 移除旧 1.21 block-entity payload（146 处；旧 Direction-int/大写枚举/旧 ItemStack 会致 `Optional.orElseThrow`）、其余 11 个场景 nbt 不动；`/ponder create:experience_nugget` 实测打开 + 中文 + basic 场景方块几何 + 0 crash。
+- 前置：ponder 15 个场景 nbt 完成 26.3 palette 迁移（Name/Properties→id/properties，缺失会导致场景全空）；zh_cn 原为英文复制（假汉化），已用 1.21.1 原包真实中文按 key 合并（335/336 键）+ 手译 1 键；另把源码中 181 处硬编码 ponder/GUI 英文文本（scene.title/scene.text 字面量）替换为中文并重编译（0 errors）。
 - 已知降级：ponder 3D 场景渲染依赖 live create-fly（R421 修复，未改动）；我方仅做文本汉化，不改渲染代码。
 
 ## 流体（CEI / DragonsPlus）

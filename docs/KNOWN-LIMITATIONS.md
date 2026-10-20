@@ -24,6 +24,9 @@
 - sliceanddice：配方加载、交互可用；部分切割产物模型简化。
 - 中央厨房：机械臂×FD 联动为降级实现，ponder 未做。
 
+## CEI ponder（experience 场景）
+- `experience/{basic,advance,beacon_base}.nbt` 的旧 1.21 block-entity payload 已移除（26.3 BE schema 不兼容）；场景几何/动画主体保留，**BE 初始状态回退默认**（隧道过滤、传送带内容、粉碎轮库存等），不影响打开与可见性。
+
 ## 流体（CEI / DragonsPlus）
 - CEI 流体注册已正确（live）；游戏内 `create_enchantment_industry:experience` setblock/读回已 PASS（探针实拍 `fluids_live.png`）。
 - DP 保持 live 旧件：新构建仅 create 依赖下限升至 >=6.0.9-4，live create 为 6.0.9-2 ⇒ 不可启动；不升级 create-fly（上游链风险）。
