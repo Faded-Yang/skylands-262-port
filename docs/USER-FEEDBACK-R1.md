@@ -5,14 +5,14 @@
 | # | 问题 | 归属 | 状态 | 证据/说明 |
 |---|---|---|---|---|
 | 1 | 设置→辅助功能设置 偶发崩溃（1 次，未复现） | lead+probe | ⏳ | 待复现抓 crasherror |
-| 2 | 任务书 UI 不可用：仅蓝框可点、章节列表不可点、底部按钮不可用、布局远差原版 | ponder | 🔄 | v1：修绘制顺序（黑蒙层遮按钮）、章节分页+滚轮、hover、提示；probe 验证中 |
-| 3 | 物理组装器右键崩溃、无法组装（C-3） | crashfix | 🔄 | 本地复现 + 抓 crash-report |
-| 4 | Create 机械冲压机不工作（C-2）：depot+铜锭+供能无效 | crashfix | 🔄 | 复现中 |
+| 2 | 任务书 UI 不可用：仅蓝框可点、章节列表不可点、底部按钮不可用 | ponder | ✅ | v2 已合并：章节列表可见可翻页（`<-`/`->`+方向键）、当前章 `> `、任务格高亮、四按钮可见、锁定提示中文；鼠标点击注入待手测 |
+| 3 | 「一碰就崩」实为 createframed 滑动门放置崩溃 | crashfix | ✅ | 根因 BE 类型校验失败；修后放置 0 崩溃、门可开关（crashfix 1.0.1） |
+| 4 | Create 机械冲压机不工作（C-2） | crashfix | ✅ | 根因 create-fly 配方为 0；补 1607 条配方后铜锭→铜板（Running=1→Finished=1） |
 | 5 | 机械动力相关模组方块大量显示错误/破碎 | aero | 🔄 | 扫描出 2414 条 texture 闭包缺失（dndecor 1940/createdeco 396/create_connected 23/aeroworks/tfmg 等），分批修 |
 | 6 | 大量物品名显示 raw key（`item.copycats.copycat_pane` 等） | aero | 🔄 | 根因：BlockItem 取 `item.*` 键但 lang 只有 `block.*`；约 3300 可镜射 + 95 需生成 |
 | 7 | 装饰门：敲掉一格后另一格空心/极端视角消失、右键无反应 | crashfix | 🔄 | 改为双半联动（敲一半两半消失）+ 修渲染 |
 | 8 | 装饰牌匾：只能朝上放、透视错误、无特性 | crashfix | 🔄 | 支持墙面朝向 |
-| 9 | CEI 经验颗粒思索界面英文未汉化 + 渲染异常 | ponder | ⏳ | task-42 |
+| 9 | 思索界面英文未汉化 + 渲染异常 | ponder | 🔄 | CEI 汉化已合并；黑屏根因=renderToTexture 空实现，fix7 待 probe |
 | 10 | culturaldelights 所有物品无功能（食物不能吃、橱窗不能右键） | aero | ⏳ | task-44（后置） |
 | 11 | 装饰类只有栏杆符合要求，其余多数未测/不合格 | 持续 | 🔄 | 按用户后续反馈逐项修 |
 | - | C-1（Create 基础）正常；C-4 扳手可旋转动力轴承 | — | ✅ | 用户确认 |
