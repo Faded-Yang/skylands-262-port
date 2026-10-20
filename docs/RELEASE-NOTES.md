@@ -18,6 +18,7 @@
 
 ## 任务系统（自研 sky262-quests 1.6.0）
 - J 键任务书、22 章 543 任务、提交/领取/锁定/奖励、进度存档、命令与结构化日志。已验证：按钮「关闭/提交/检查/领取」中文、锁定提示中文、描述多行可读、无「空气」图标。
+- UI v2（86900d5b…）**widget 化**：任务格改为 `AbstractWidget`（命中区域=高亮区域）、章节/翻页/四按钮为真 Button、11 个中文 tooltip 与禁用原因（请先选择任务/未解锁/已完成/已领取）。mcpfabric `ui.widgets`+`ui.click` 实测：章节/翻页可点、点任务格后 Submit 由 disabled→enabled、点 Submit 服务端回执 `submit <quest> -> missing-items`；17 个 widget 全暴露。
 
 ## 世界生成：natures_spirit
 - 153 个 NS 生物群系可生成/可定位（84B1C308…，B2）。已验证：/locate biome natures_spirit:redwood_forest 返回坐标并实拍巨型红杉林；blooming_highlands 实拍雪松/秋色/湖；地表 grass_block。
@@ -34,11 +35,15 @@
 - sky262-mcp（WS 25576）+ tools/mcp_fabric_client.mjs：getState/getBlock/chat.send/screenshot.take 全链路；多轮实拍截图留档（g33/mcp-shots）。
 - 创造栏：DP 19 物品、CEI 15 物品可见（01FAFE34… / 82EAB589…）。
 
+## 汉化（CEI 思索界面）
+- CEI（cf037d0b…）：zh_cn 原为英文复制（假汉化），已用 1.21.1 原包真实中文按 key 合并（335/336 键）+ 手译 1 键；另把源码中 181 处硬编码 ponder/GUI 英文文本（scene.title/scene.text 字面量）替换为中文并重编译（0 errors）。
+- 已知降级：ponder 3D 场景渲染依赖 live create-fly（R421 修复，未改动）；我方仅做文本汉化，不改渲染代码。
+
 ## 流体（CEI / DragonsPlus）
 - CEI 26.3 流体注册（FluidEntry 直注册 still/flowing）已在 live（72880D90…），编译 0 错；MCP 实测 experience/blue_dye 两流体块 setblock+读回一致；DP 保持 live（01FAFE34…，新构建仅 fabric.mod.json 版本下限差异）。详见 docs/port-fluids-263.md。
 
 ## 机械 / 交互
-- Sophisticated Storage 1.6.7（reduced 壳，5e49a8ac…）：59 方块 + 147 物品（88 plain + 59 block items）+ 自建创造栏「精妙存储」；item model 全量重建为 vanilla item/generated（原 mod 自定义 loader 在 26.3 不可用）。MCP 实测：147 items 日志、give copper_chest→铜箱子/copper_barrel→铜桶（无 %s）、setblock 读回、Missing model 0、bad item textures 0、0 crash。
+- Sophisticated Storage 1.6.7（reduced 壳，ad13f766…）：59 方块 + 147 物品（88 plain + 59 block items）+ 自建创造栏「精妙存储」；item model 全量重建为 vanilla item/generated（原 mod 自定义 loader 在 26.3 不可用）。MCP 实测：147 items 日志、give copper_chest→铜箱子/copper_barrel→铜桶（无 %s）、setblock 读回、Missing model 0、bad item textures 0、0 crash。
 - Sophisticated Backpacks 3.26.12（reduced 壳，68573bde…）：79 注册项（6 方块 + 73 物品）+ 自建创造栏「精妙背包」。MCP 实测：give backpack/advanced_pickup_upgrade 到手（已汉化）、setblock backpack/diamond_backpack 读回一致、Missing model 0、0 crash、registry 0。GUI/存储功能未移植。
 - Create: Connected 1.3.3（reduced，37fec0a3…）：109 个 QoL 方块（齿轮箱/离合器/滑槽/风扇染料催化剂/copycat 系列等）纯外观注册 + 自建创造栏页签。MCP 实测：109 blocks 注册日志、10/10 setblock 读回一致、Missing model 0、0 crash、registry 0。
 

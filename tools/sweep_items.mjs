@@ -18,7 +18,9 @@ async function call(m, p = {}) {
 }
 const all = JSON.parse(fs.readFileSync(idsFile, "utf8"));
 let ids = [];
-for (const [ns, list] of Object.entries(all)) { if (nsFilter && !nsFilter.includes(ns)) continue; for (const id of list) ids.push(id); }
+for (const [ns, list] of Object.entries(all)) { if (nsFilter && !nsFilter.includes(ns)) continue; for (const raw of list) ids.push(raw.includes(":") ? raw : ns + ":" + raw); }
+const badIds = ids.filter((id) => !id.includes(":"));
+if (badIds.length) { console.error("BAD ids (no namespace):", badIds.slice(0, 5)); process.exit(2); }
 console.log("items:", ids.length);
 const result = { ok: [], unknown: [], rawkey: [], error: [] };
 for (let i = 0; i < ids.length; i++) {

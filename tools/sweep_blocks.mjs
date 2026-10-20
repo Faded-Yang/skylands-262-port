@@ -31,8 +31,10 @@ const all = JSON.parse(fs.readFileSync(idsFile, "utf8"));
 let ids = [];
 for (const [ns, list] of Object.entries(all)) {
   if (nsFilter && !nsFilter.includes(ns)) continue;
-  for (const id of list) ids.push(id);
+  for (const raw of list) ids.push(raw.includes(":") ? raw : ns + ":" + raw);
 }
+const bad = ids.filter((id) => !id.includes(":"));
+if (bad.length) { console.error("BAD ids (no namespace):", bad.slice(0, 5)); process.exit(2); }
 ids = ids.slice(resume, resume + limit);
 console.log("sweep ids:", ids.length, "of", Object.values(all).reduce((a, b) => a + b.length, 0));
 
