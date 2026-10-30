@@ -1,0 +1,11 @@
+[
+ {
+  "owner": "net/neoforged/neoforge/common/ModConfigSpec$IntValue",
+  "name": "getAsInt",
+  "desc": "()I",
+  "bridge": "dev/eriksonn/aeronautics/compat/ConfigIntBridge",
+  "new_desc": "(Lnet/neoforged/neoforge/common/ModConfigSpec$IntValue;)I",
+  "opcode": "virtual",
+  "note": "ForgeConfigAPIPort: 配置未 load 时 getAsInt 抛 IllegalStateException；Sable 在 ServerLevel.<init> 早期就读"
+ }
+]

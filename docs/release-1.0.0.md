@@ -61,6 +61,12 @@
 3. **mcpfabric 是 dev-only 验证工具**：不在 114 jar 交付中，也不应加入用户包。
 4. 其它历史已知降级（原台账 0 节）：natures_spirit 原版 placer 树形、部分 reduced mod 无 recipe/advancement 数据等。
 
+## 4.1 启动与用户世界注意（2026-10-20 21:2x 实测）
+
+- 按 `启动浮岛世界.bat` 同款参数（`--quickPlaySingleplayer=sky islands`）起局时，用户世界 `work/run26/watch/saves/sky islands/level.dat` 含 `enabled_features`（redstone 实验），会先弹「**不支持使用实验性设置的世界**」确认框，需点「我知道我在做什么」才能进入；
+- 已在副本上验证修复：`python tools/nbt_edit.py strip-experimental <level.dat>` 后不再弹框（不修改 watch 原始世界）；
+- **建议 1.0.1 / 发布包**：附带已 strip 的 `sky islands` 世界，或在发布说明中写明首次进入需确认一次。
+
 ## 5. 备注
 
 - SHA 对比表：`work/run26/port/g76/stage/v100-rc1-SHA.md`（114 行，mismatch=0）。

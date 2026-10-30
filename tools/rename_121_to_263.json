@@ -1,0 +1,17 @@
+{
+  "_comment": "1.21.x 官方名 -> 26.3 官方名 的改名表。成员 key 形如 '<owner>|<name>|<desc>'，全部用 **1.21.x 官方名空间**（就是 audit_jar_api 输出的那个空间）。desc 里出现 1.21.x 的 ResourceLocation，不用手改成 Identifier。",
+  "classes": {
+    "net/minecraft/resources/ResourceLocation": "net/minecraft/resources/Identifier"
+  },
+  "members": {
+    "net/minecraft/resources/ResourceKey|location|()Lnet/minecraft/resources/ResourceLocation;": "identifier",
+    "net/minecraft/world/level/LevelHeightAccessor|getMinBuildHeight|()I": "getMinY",
+    "net/minecraft/world/level/LevelHeightAccessor|getMaxBuildHeight|()I": "getMaxY",
+    "net/minecraft/core/RegistryAccess|registryOrThrow|(Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/core/Registry;": "lookupOrThrow",
+    "net/minecraft/server/level/ServerLevel|getStructureManager|()Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplateManager;": "getStructureTemplateManager",
+    "net/minecraft/core/Registry|getHolder|(Lnet/minecraft/resources/ResourceKey;)Ljava/util/Optional;": "getOptional",
+    "net/minecraft/core/Registry|get|(Lnet/minecraft/resources/ResourceKey;)Ljava/lang/Object;": "getValue",
+    "net/minecraft/core/Holder|value|()Ljava/lang/Object;": "value",
+    "net/minecraft/resources/ResourceKey|registry|()Lnet/minecraft/resources/ResourceLocation;": "registry"
+  }
+}

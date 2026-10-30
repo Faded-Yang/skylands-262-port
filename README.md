@@ -19,7 +19,7 @@ Minecraft 26.3 是一次「破坏性」更新：官方从 26.x 起直接发布�
 - 我们自研 mod 的源码：任务系统、喷气背包、便携结构打印机、若干装饰/功能方块包；
 - 我们移植并适配到 26.3 的 MIT 许可 minecraft-mcp 客户端 mod 源码。
 
-最终交付形态是一个能启动、能建世界、能玩的 26.3 整合包（交付件 93 个 jar / 170+ mod 项），细节见 docs/DELIVERY.md。
+最终交付形态是一个能启动、能建世界、能玩的 26.3 整合包：**118 个 jar / 118 个 mod id**（MC 26.3 + Fabric Loader 0.19.5 + Java 25）。清单与 SHA-256 指纹见 docs/DELIVERED-JARS.md，细节见 docs/DELIVERY.md。
 
 ### 目录
 
@@ -27,6 +27,7 @@ Minecraft 26.3 是一次「破坏性」更新：官方从 26.x 起直接发布�
 - tools/    工具：反编译、可复现打包、启动器、MCP 客户端、语言审计
 - src/      minecraft-mcp 客户端 mod 的 26.3 适配源码（上游 MIT）
 - examples/ 自研 mod 源码（任务系统）与启动脚本示例
+- scratch/   本轮审计与修复记录：模型/图标审计的离线报告与机读清单（broken.json / CHANGELOG.md）
 
 ### 值得看的几篇
 
@@ -36,6 +37,17 @@ Minecraft 26.3 是一次「破坏性」更新：官方从 26.x 起直接发布�
 - docs/LEDGER-FULL.md —— 完整工程台账（含失败尝试与原因）
 - docs/port-*.md —— 各 mod 的逐项移植记录
 - docs/mcp-fabric-mod.md —— 用 MCP 在游戏内截图/控制客户端做验收
+- docs/DELIVERED-JARS.md —— 交付件清单：118 个 jar 的体积 / SHA-256 前 16 位 / 来源分类（**不含 jar 本体**）
+- docs/SHELVE-NOTES.md —— 搁置与恢复说明：当前状态快照、恢复工程的最小步骤、已知欠账、验收口径
+- docs/R569-model-display-audit.md —— 「物品显示有问题」的实测取证与判据纠正（本项目最重要的一次 KPI 纠错）
+
+### 最近一轮（2026-10-22）发现
+
+1. **「绝大多数物品显示有问题」在 1.0.7 上不成立**：35 个创造栏 tab / 1121 个可见物品格逐格截图检测，missing（品红·黑棋盘）= **0**。真实破损是小面积、集中的 **item 97 个 id / block 71 个 id**（interiors 最多），另有约 97 个「图标对但画的是别人」的占位图（tfmg 的 barrier 图标、sophisticated 的共用槽位图）。
+2. **历史验收 KPI 漏了 3 类日志**：只 grep `Missing textures in model`（1.0.3 起恒为 0）会漏掉 `Missing texture references in model`（395 行）、`Rejecting block model ... outside of supported atlas`（32 行）、`Unable to bake item model`（1 行）。⇒ 显示/模型验收改用 tools/audit_models.py 的 reason 计数；这个工具与真机 latest.log **7 类全部对齐**（395/395、29/29、8/8、4/4、2/2、1/1、0/0）。
+3. **26.3 的资源包优先级 = mod id 字典序**：`PackRepository.openAllSelected()` 列表末尾最高，mod 包按 **mod id 字典序升序**追加 ⇒ 覆盖包的 mod id 必须字典序大于被覆盖 mod（先例 `zsky262_preset` / `zsky262_modelfix`）；运行期看 `Reloading ResourceManager:` 行核对。
+
+> 详细：docs/R569-model-display-audit.md、docs/model-audit-263.md、docs/visual-audit-2026-10-22.md。
 
 ### 工具
 
@@ -44,6 +56,8 @@ Minecraft 26.3 是一次「破坏性」更新：官方从 26.x 起直接发布�
 - tools/launch26/launch.py —— 26.3 启动器（标题/进世界自动化、超时抓线程栈）
 - tools/mcp_fabric_client.mjs —— 连接游戏内 MCP（截图/玩家状态/放置方块）
 - tools/diff_pack.py / lang_audit.py —— 依赖清点、汉化审计
+- tools/audit_models.py —— 26.3 模型烘焙离线审计器（**显示/模型验收的权威口径**，不是 grep 日志）
+- tools/visual-audit/ —— 游戏内视觉取证：创造栏逐格扫 missing、方块顶面品红判定 + 单应标定、图标重复/占位检测
 
 ### 法律与边界
 
@@ -69,7 +83,7 @@ This repository documents the full engineering effort of migrating the pack fiel
 - sources of our own mods: quest system, jetpack, portable structure printer, decorative/functional block packs;
 - our 26.3 adaptation of the MIT-licensed minecraft-mcp client mod.
 
-The end result is a bootable, playable 26.3 Fabric pack (93 jars / 170+ mod entries). See docs/DELIVERY.md.
+The end result is a bootable, playable 26.3 Fabric pack — **118 jars / 118 mod ids** (MC 26.3 + Fabric Loader 0.19.5 + Java 25). See docs/DELIVERED-JARS.md for the manifest (sizes + SHA-256 fingerprint), docs/DELIVERY.md for details.
 
 ### Legal
 

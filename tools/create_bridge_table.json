@@ -1,0 +1,596 @@
+[
+ {
+  "owner": "net/minecraft/world/level/block/state/BlockBehaviour$Properties",
+  "name": "isViewBlocking",
+  "desc": "(Lnet/minecraft/world/level/block/state/BlockBehaviour$StatePredicate;)Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;",
+  "bridge": "dev/eriksonn/aeronautics/compat/BlockPropertiesBridge",
+  "new_desc": "(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;Lnet/minecraft/world/level/block/state/BlockBehaviour$StatePredicate;)Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;",
+  "opcode": "virtual",
+  "note": "26.3: StatePredicate -> StateArgumentPredicate<AABB>"
+ },
+ {
+  "owner": "com/mojang/serialization/codecs/RecordCodecBuilder$Instance",
+  "name": "group",
+  "desc": "(Lcom/mojang/datafixers/kinds/App;)Lcom/mojang/datafixers/Products$P1;",
+  "bridge": "dev/eriksonn/aeronautics/compat/CodecGroupBridge",
+  "new_desc": "(Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;Lcom/mojang/datafixers/kinds/App;)Lcom/mojang/datafixers/Products$P1;",
+  "opcode": "interface",
+  "note": "DFU10 removed Instance.group; group = Products.PN tuple"
+ },
+ {
+  "owner": "com/mojang/serialization/codecs/RecordCodecBuilder$Instance",
+  "name": "group",
+  "desc": "(Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;)Lcom/mojang/datafixers/Products$P2;",
+  "bridge": "dev/eriksonn/aeronautics/compat/CodecGroupBridge",
+  "new_desc": "(Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;)Lcom/mojang/datafixers/Products$P2;",
+  "opcode": "interface",
+  "note": "DFU10 removed Instance.group; group = Products.PN tuple"
+ },
+ {
+  "owner": "com/mojang/serialization/codecs/RecordCodecBuilder$Instance",
+  "name": "group",
+  "desc": "(Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;)Lcom/mojang/datafixers/Products$P3;",
+  "bridge": "dev/eriksonn/aeronautics/compat/CodecGroupBridge",
+  "new_desc": "(Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;)Lcom/mojang/datafixers/Products$P3;",
+  "opcode": "interface",
+  "note": "DFU10 removed Instance.group; group = Products.PN tuple"
+ },
+ {
+  "owner": "com/mojang/serialization/codecs/RecordCodecBuilder$Instance",
+  "name": "group",
+  "desc": "(Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;)Lcom/mojang/datafixers/Products$P4;",
+  "bridge": "dev/eriksonn/aeronautics/compat/CodecGroupBridge",
+  "new_desc": "(Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;)Lcom/mojang/datafixers/Products$P4;",
+  "opcode": "interface",
+  "note": "DFU10 removed Instance.group; group = Products.PN tuple"
+ },
+ {
+  "owner": "com/mojang/serialization/codecs/RecordCodecBuilder$Instance",
+  "name": "group",
+  "desc": "(Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;)Lcom/mojang/datafixers/Products$P5;",
+  "bridge": "dev/eriksonn/aeronautics/compat/CodecGroupBridge",
+  "new_desc": "(Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;)Lcom/mojang/datafixers/Products$P5;",
+  "opcode": "interface",
+  "note": "DFU10 removed Instance.group; group = Products.PN tuple"
+ },
+ {
+  "owner": "com/mojang/serialization/codecs/RecordCodecBuilder$Instance",
+  "name": "group",
+  "desc": "(Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;)Lcom/mojang/datafixers/Products$P6;",
+  "bridge": "dev/eriksonn/aeronautics/compat/CodecGroupBridge",
+  "new_desc": "(Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;)Lcom/mojang/datafixers/Products$P6;",
+  "opcode": "interface",
+  "note": "DFU10 removed Instance.group; group = Products.PN tuple"
+ },
+ {
+  "owner": "com/mojang/serialization/codecs/RecordCodecBuilder$Instance",
+  "name": "group",
+  "desc": "(Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;)Lcom/mojang/datafixers/Products$P8;",
+  "bridge": "dev/eriksonn/aeronautics/compat/CodecGroupBridge",
+  "new_desc": "(Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;)Lcom/mojang/datafixers/Products$P8;",
+  "opcode": "interface",
+  "note": "DFU10 removed Instance.group; group = Products.PN tuple"
+ },
+ {
+  "owner": "com/mojang/serialization/codecs/RecordCodecBuilder$Instance",
+  "name": "group",
+  "desc": "(Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;)Lcom/mojang/datafixers/Products$P12;",
+  "bridge": "dev/eriksonn/aeronautics/compat/CodecGroupBridge",
+  "new_desc": "(Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;)Lcom/mojang/datafixers/Products$P12;",
+  "opcode": "interface",
+  "note": "DFU10 removed Instance.group; group = Products.PN tuple"
+ },
+ {
+  "owner": "com/mojang/serialization/codecs/RecordCodecBuilder$Instance",
+  "name": "group",
+  "desc": "(Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;)Lcom/mojang/datafixers/Products$P15;",
+  "bridge": "dev/eriksonn/aeronautics/compat/CodecGroupBridge",
+  "new_desc": "(Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;)Lcom/mojang/datafixers/Products$P15;",
+  "opcode": "interface",
+  "note": "DFU10 removed Instance.group; group = Products.PN tuple"
+ },
+ {
+  "owner": "com/mojang/blaze3d/vertex/PoseStack",
+  "name": "mulPose",
+  "desc": "(Lorg/joml/Quaternionfc;)V",
+  "bridge": "dev/eriksonn/aeronautics/compat/PoseStackBridge",
+  "new_desc": "(Lcom/mojang/blaze3d/vertex/PoseStack;Lorg/joml/Quaternionfc;)V",
+  "opcode": "virtual",
+  "note": "26.3: mulPose(Quaternionfc) -> rotate(Quaternionfc)"
+ },
+ {
+  "owner": "net/minecraft/world/entity/player/Inventory",
+  "name": "placeItemBackInInventory",
+  "desc": "(Lnet/minecraft/world/item/ItemStack;)V",
+  "bridge": "dev/eriksonn/aeronautics/compat/InventoryBridge",
+  "new_desc": "(Lnet/minecraft/world/entity/player/Inventory;Lnet/minecraft/world/item/ItemStack;)V",
+  "opcode": "virtual",
+  "note": "26.3 多了 Prediction 参数；桥接取 PREDICTED"
+ },
+ {
+  "owner": "net/minecraft/world/Container",
+  "name": "insert",
+  "desc": "(Lnet/minecraft/world/item/ItemStack;)I",
+  "bridge": "dev/eriksonn/aeronautics/compat/ContainerBridge",
+  "new_desc": "(Lnet/minecraft/world/Container;Lnet/minecraft/world/item/ItemStack;)I",
+  "opcode": "interface",
+  "note": "26.3 删掉了 26.2 的 Container 搬运 API，ContainerBridge 按语义重建"
+ },
+ {
+  "owner": "net/minecraft/world/Container",
+  "name": "extract",
+  "desc": "(Lnet/minecraft/world/item/ItemStack;I)I",
+  "bridge": "dev/eriksonn/aeronautics/compat/ContainerBridge",
+  "new_desc": "(Lnet/minecraft/world/Container;Lnet/minecraft/world/item/ItemStack;I)I",
+  "opcode": "interface",
+  "note": "26.3 删掉了 26.2 的 Container 搬运 API，ContainerBridge 按语义重建"
+ },
+ {
+  "owner": "net/minecraft/world/Container",
+  "name": "extract",
+  "desc": "(Lnet/minecraft/world/item/ItemStack;)I",
+  "bridge": "dev/eriksonn/aeronautics/compat/ContainerBridge",
+  "new_desc": "(Lnet/minecraft/world/Container;Lnet/minecraft/world/item/ItemStack;)I",
+  "opcode": "interface",
+  "note": "26.3 删掉了 26.2 的 Container 搬运 API，ContainerBridge 按语义重建"
+ },
+ {
+  "owner": "net/minecraft/world/Container",
+  "name": "extract",
+  "desc": "(Lnet/minecraft/world/item/ItemStack;ILnet/minecraft/core/Direction;)I",
+  "bridge": "dev/eriksonn/aeronautics/compat/ContainerBridge",
+  "new_desc": "(Lnet/minecraft/world/Container;Lnet/minecraft/world/item/ItemStack;ILnet/minecraft/core/Direction;)I",
+  "opcode": "interface",
+  "note": "26.3 删掉了 26.2 的 Container 搬运 API，ContainerBridge 按语义重建"
+ },
+ {
+  "owner": "net/minecraft/world/Container",
+  "name": "count",
+  "desc": "(Ljava/util/function/Predicate;I)Lnet/minecraft/world/item/ItemStack;",
+  "bridge": "dev/eriksonn/aeronautics/compat/ContainerBridge",
+  "new_desc": "(Lnet/minecraft/world/Container;Ljava/util/function/Predicate;I)Lnet/minecraft/world/item/ItemStack;",
+  "opcode": "interface",
+  "note": "26.3 删掉了 26.2 的 Container 搬运 API，ContainerBridge 按语义重建"
+ },
+ {
+  "owner": "net/minecraft/world/Container",
+  "name": "extract",
+  "desc": "(Ljava/util/function/Predicate;I)Lnet/minecraft/world/item/ItemStack;",
+  "bridge": "dev/eriksonn/aeronautics/compat/ContainerBridge",
+  "new_desc": "(Lnet/minecraft/world/Container;Ljava/util/function/Predicate;I)Lnet/minecraft/world/item/ItemStack;",
+  "opcode": "interface",
+  "note": "26.3 删掉了 26.2 的 Container 搬运 API，ContainerBridge 按语义重建"
+ },
+ {
+  "owner": "net/minecraft/world/Container",
+  "name": "insertExist",
+  "desc": "(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/core/Direction;)I",
+  "bridge": "dev/eriksonn/aeronautics/compat/ContainerBridge",
+  "new_desc": "(Lnet/minecraft/world/Container;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/core/Direction;)I",
+  "opcode": "interface",
+  "note": "26.3 删掉了 26.2 的 Container 搬运 API，ContainerBridge 按语义重建"
+ },
+ {
+  "owner": "net/minecraft/world/Container",
+  "name": "countSpace",
+  "desc": "(Lnet/minecraft/world/item/ItemStack;I)I",
+  "bridge": "dev/eriksonn/aeronautics/compat/ContainerBridge",
+  "new_desc": "(Lnet/minecraft/world/Container;Lnet/minecraft/world/item/ItemStack;I)I",
+  "opcode": "interface",
+  "note": "26.3 删掉了 26.2 的 Container 搬运 API，ContainerBridge 按语义重建"
+ },
+ {
+  "owner": "net/minecraft/world/Container",
+  "name": "count",
+  "desc": "(Ljava/util/function/Predicate;ILnet/minecraft/core/Direction;)Lnet/minecraft/world/item/ItemStack;",
+  "bridge": "dev/eriksonn/aeronautics/compat/ContainerBridge",
+  "new_desc": "(Lnet/minecraft/world/Container;Ljava/util/function/Predicate;ILnet/minecraft/core/Direction;)Lnet/minecraft/world/item/ItemStack;",
+  "opcode": "interface",
+  "note": "26.3 删掉了 26.2 的 Container 搬运 API，ContainerBridge 按语义重建"
+ },
+ {
+  "owner": "net/minecraft/world/Container",
+  "name": "extract",
+  "desc": "(Ljava/util/function/Predicate;ILnet/minecraft/core/Direction;)Lnet/minecraft/world/item/ItemStack;",
+  "bridge": "dev/eriksonn/aeronautics/compat/ContainerBridge",
+  "new_desc": "(Lnet/minecraft/world/Container;Ljava/util/function/Predicate;ILnet/minecraft/core/Direction;)Lnet/minecraft/world/item/ItemStack;",
+  "opcode": "interface",
+  "note": "26.3 删掉了 26.2 的 Container 搬运 API，ContainerBridge 按语义重建"
+ },
+ {
+  "owner": "net/minecraft/world/Container",
+  "name": "insertExist",
+  "desc": "(Lnet/minecraft/world/item/ItemStack;)I",
+  "bridge": "dev/eriksonn/aeronautics/compat/ContainerBridge",
+  "new_desc": "(Lnet/minecraft/world/Container;Lnet/minecraft/world/item/ItemStack;)I",
+  "opcode": "interface",
+  "note": "26.3 删掉了 26.2 的 Container 搬运 API，ContainerBridge 按语义重建"
+ },
+ {
+  "owner": "net/minecraft/world/Container",
+  "name": "iterator",
+  "desc": "(Lnet/minecraft/core/Direction;)Ljava/util/Iterator;",
+  "bridge": "dev/eriksonn/aeronautics/compat/ContainerBridge",
+  "new_desc": "(Lnet/minecraft/world/Container;Lnet/minecraft/core/Direction;)Ljava/util/Iterator;",
+  "opcode": "interface",
+  "note": "26.3 删掉了 26.2 的 Container 搬运 API，ContainerBridge 按语义重建"
+ },
+ {
+  "owner": "net/minecraft/world/Container",
+  "name": "countSpace",
+  "desc": "(Lnet/minecraft/world/item/ItemStack;ILnet/minecraft/core/Direction;)I",
+  "bridge": "dev/eriksonn/aeronautics/compat/ContainerBridge",
+  "new_desc": "(Lnet/minecraft/world/Container;Lnet/minecraft/world/item/ItemStack;ILnet/minecraft/core/Direction;)I",
+  "opcode": "interface",
+  "note": "26.3 删掉了 26.2 的 Container 搬运 API，ContainerBridge 按语义重建"
+ },
+ {
+  "owner": "net/minecraft/world/Container",
+  "name": "extractAll",
+  "desc": "(Ljava/util/function/Predicate;I)I",
+  "bridge": "dev/eriksonn/aeronautics/compat/ContainerBridge",
+  "new_desc": "(Lnet/minecraft/world/Container;Ljava/util/function/Predicate;I)I",
+  "opcode": "interface",
+  "note": "26.3 删掉了 26.2 的 Container 搬运 API，ContainerBridge 按语义重建"
+ },
+ {
+  "owner": "net/minecraft/world/Container",
+  "name": "preciseInsert",
+  "desc": "(Lnet/minecraft/world/item/ItemStack;)Z",
+  "bridge": "dev/eriksonn/aeronautics/compat/ContainerBridge",
+  "new_desc": "(Lnet/minecraft/world/Container;Lnet/minecraft/world/item/ItemStack;)Z",
+  "opcode": "interface",
+  "note": "26.3 删掉了 26.2 的 Container 搬运 API，ContainerBridge 按语义重建"
+ },
+ {
+  "owner": "net/minecraft/world/Container",
+  "name": "preciseExtract",
+  "desc": "(Lnet/minecraft/world/item/ItemStack;)Z",
+  "bridge": "dev/eriksonn/aeronautics/compat/ContainerBridge",
+  "new_desc": "(Lnet/minecraft/world/Container;Lnet/minecraft/world/item/ItemStack;)Z",
+  "opcode": "interface",
+  "note": "26.3 删掉了 26.2 的 Container 搬运 API，ContainerBridge 按语义重建"
+ },
+ {
+  "owner": "net/minecraft/world/Container",
+  "name": "countSpace",
+  "desc": "(Lnet/minecraft/world/item/ItemStack;)I",
+  "bridge": "dev/eriksonn/aeronautics/compat/ContainerBridge",
+  "new_desc": "(Lnet/minecraft/world/Container;Lnet/minecraft/world/item/ItemStack;)I",
+  "opcode": "interface",
+  "note": "26.3 删掉了 26.2 的 Container 搬运 API，ContainerBridge 按语义重建"
+ },
+ {
+  "owner": "net/minecraft/world/Container",
+  "name": "insert",
+  "desc": "(Lnet/minecraft/world/item/ItemStack;ILnet/minecraft/core/Direction;)I",
+  "bridge": "dev/eriksonn/aeronautics/compat/ContainerBridge",
+  "new_desc": "(Lnet/minecraft/world/Container;Lnet/minecraft/world/item/ItemStack;ILnet/minecraft/core/Direction;)I",
+  "opcode": "interface",
+  "note": "26.3 删掉了 26.2 的 Container 搬运 API，ContainerBridge 按语义重建"
+ },
+ {
+  "owner": "net/minecraft/world/Container",
+  "name": "countAll",
+  "desc": "(Ljava/util/function/Predicate;I)I",
+  "bridge": "dev/eriksonn/aeronautics/compat/ContainerBridge",
+  "new_desc": "(Lnet/minecraft/world/Container;Ljava/util/function/Predicate;I)I",
+  "opcode": "interface",
+  "note": "26.3 删掉了 26.2 的 Container 搬运 API，ContainerBridge 按语义重建"
+ },
+ {
+  "owner": "net/minecraft/world/Container",
+  "name": "preciseExtract",
+  "desc": "(Ljava/util/function/Predicate;I)Lnet/minecraft/world/item/ItemStack;",
+  "bridge": "dev/eriksonn/aeronautics/compat/ContainerBridge",
+  "new_desc": "(Lnet/minecraft/world/Container;Ljava/util/function/Predicate;I)Lnet/minecraft/world/item/ItemStack;",
+  "opcode": "interface",
+  "note": "26.3 删掉了 26.2 的 Container 搬运 API，ContainerBridge 按语义重建"
+ },
+ {
+  "owner": "net/minecraft/world/Container",
+  "name": "insertExist",
+  "desc": "(Lnet/minecraft/world/item/ItemStack;I)I",
+  "bridge": "dev/eriksonn/aeronautics/compat/ContainerBridge",
+  "new_desc": "(Lnet/minecraft/world/Container;Lnet/minecraft/world/item/ItemStack;I)I",
+  "opcode": "interface",
+  "note": "26.3 删掉了 26.2 的 Container 搬运 API，ContainerBridge 按语义重建"
+ },
+ {
+  "owner": "net/minecraft/world/Container",
+  "name": "insert",
+  "desc": "(Ljava/util/List;)Ljava/util/List;",
+  "bridge": "dev/eriksonn/aeronautics/compat/ContainerBridge",
+  "new_desc": "(Lnet/minecraft/world/Container;Ljava/util/List;)Ljava/util/List;",
+  "opcode": "interface",
+  "note": "26.3 删掉了 26.2 的 Container 搬运 API，ContainerBridge 按语义重建"
+ },
+ {
+  "owner": "net/minecraft/world/Container",
+  "name": "count",
+  "desc": "(Lnet/minecraft/world/item/ItemStack;)I",
+  "bridge": "dev/eriksonn/aeronautics/compat/ContainerBridge",
+  "new_desc": "(Lnet/minecraft/world/Container;Lnet/minecraft/world/item/ItemStack;)I",
+  "opcode": "interface",
+  "note": "26.3 删掉了 26.2 的 Container 搬运 API，ContainerBridge 按语义重建"
+ },
+ {
+  "owner": "net/minecraft/world/Container",
+  "name": "count",
+  "desc": "(Lnet/minecraft/world/item/ItemStack;I)I",
+  "bridge": "dev/eriksonn/aeronautics/compat/ContainerBridge",
+  "new_desc": "(Lnet/minecraft/world/Container;Lnet/minecraft/world/item/ItemStack;I)I",
+  "opcode": "interface",
+  "note": "26.3 删掉了 26.2 的 Container 搬运 API，ContainerBridge 按语义重建"
+ },
+ {
+  "owner": "net/minecraft/world/Container",
+  "name": "countSpace",
+  "desc": "(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/core/Direction;)I",
+  "bridge": "dev/eriksonn/aeronautics/compat/ContainerBridge",
+  "new_desc": "(Lnet/minecraft/world/Container;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/core/Direction;)I",
+  "opcode": "interface",
+  "note": "26.3 删掉了 26.2 的 Container 搬运 API，ContainerBridge 按语义重建"
+ },
+ {
+  "owner": "net/minecraft/world/Container",
+  "name": "insert",
+  "desc": "(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/core/Direction;)I",
+  "bridge": "dev/eriksonn/aeronautics/compat/ContainerBridge",
+  "new_desc": "(Lnet/minecraft/world/Container;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/core/Direction;)I",
+  "opcode": "interface",
+  "note": "26.3 删掉了 26.2 的 Container 搬运 API，ContainerBridge 按语义重建"
+ },
+ {
+  "owner": "net/minecraft/world/Container",
+  "name": "extract",
+  "desc": "(Ljava/util/function/Predicate;)Lnet/minecraft/world/item/ItemStack;",
+  "bridge": "dev/eriksonn/aeronautics/compat/ContainerBridge",
+  "new_desc": "(Lnet/minecraft/world/Container;Ljava/util/function/Predicate;)Lnet/minecraft/world/item/ItemStack;",
+  "opcode": "interface",
+  "note": "26.3 删掉了 26.2 的 Container 搬运 API，ContainerBridge 按语义重建"
+ },
+ {
+  "owner": "net/minecraft/world/Container",
+  "name": "extractAnyMax",
+  "desc": "()Lnet/minecraft/world/item/ItemStack;",
+  "bridge": "dev/eriksonn/aeronautics/compat/ContainerBridge",
+  "new_desc": "(Lnet/minecraft/world/Container;)Lnet/minecraft/world/item/ItemStack;",
+  "opcode": "interface",
+  "note": "26.3 删掉了 26.2 的 Container 搬运 API，ContainerBridge 按语义重建"
+ },
+ {
+  "owner": "net/minecraft/world/Container",
+  "name": "extractMax",
+  "desc": "(Ljava/util/function/Predicate;)Lnet/minecraft/world/item/ItemStack;",
+  "bridge": "dev/eriksonn/aeronautics/compat/ContainerBridge",
+  "new_desc": "(Lnet/minecraft/world/Container;Ljava/util/function/Predicate;)Lnet/minecraft/world/item/ItemStack;",
+  "opcode": "interface",
+  "note": "26.3 删掉了 26.2 的 Container 搬运 API，ContainerBridge 按语义重建"
+ },
+ {
+  "owner": "net/minecraft/world/Container",
+  "name": "extract",
+  "desc": "(Ljava/util/List;)Ljava/util/List;",
+  "bridge": "dev/eriksonn/aeronautics/compat/ContainerBridge",
+  "new_desc": "(Lnet/minecraft/world/Container;Ljava/util/List;)Ljava/util/List;",
+  "opcode": "interface",
+  "note": "26.3 删掉了 26.2 的 Container 搬运 API，ContainerBridge 按语义重建"
+ },
+ {
+  "owner": "net/minecraft/world/Container",
+  "name": "countSpace",
+  "desc": "(Ljava/util/List;II)Z",
+  "bridge": "dev/eriksonn/aeronautics/compat/ContainerBridge",
+  "new_desc": "(Lnet/minecraft/world/Container;Ljava/util/List;II)Z",
+  "opcode": "interface",
+  "note": "26.3 删掉了 26.2 的 Container 搬运 API，ContainerBridge 按语义重建"
+ },
+ {
+  "owner": "net/minecraft/world/Container",
+  "name": "insert",
+  "desc": "(Ljava/util/List;II)Ljava/util/List;",
+  "bridge": "dev/eriksonn/aeronautics/compat/ContainerBridge",
+  "new_desc": "(Lnet/minecraft/world/Container;Ljava/util/List;II)Ljava/util/List;",
+  "opcode": "interface",
+  "note": "26.3 删掉了 26.2 的 Container 搬运 API，ContainerBridge 按语义重建"
+ },
+ {
+  "owner": "net/minecraft/world/Container",
+  "name": "update",
+  "desc": "(Ljava/util/function/Predicate;Ljava/util/function/Function;)Z",
+  "bridge": "dev/eriksonn/aeronautics/compat/ContainerBridge",
+  "new_desc": "(Lnet/minecraft/world/Container;Ljava/util/function/Predicate;Ljava/util/function/Function;)Z",
+  "opcode": "interface",
+  "note": "26.3 删掉了 26.2 的 Container 搬运 API，ContainerBridge 按语义重建"
+ },
+ {
+  "owner": "net/minecraft/world/Container",
+  "name": "preciseCount",
+  "desc": "(Ljava/util/function/Predicate;I)Lnet/minecraft/world/item/ItemStack;",
+  "bridge": "dev/eriksonn/aeronautics/compat/ContainerBridge",
+  "new_desc": "(Lnet/minecraft/world/Container;Ljava/util/function/Predicate;I)Lnet/minecraft/world/item/ItemStack;",
+  "opcode": "interface",
+  "note": "26.3 删掉了 26.2 的 Container 搬运 API，ContainerBridge 按语义重建"
+ },
+ {
+  "owner": "net/minecraft/world/Container",
+  "name": "countSpace",
+  "desc": "(Ljava/util/List;)Z",
+  "bridge": "dev/eriksonn/aeronautics/compat/ContainerBridge",
+  "new_desc": "(Lnet/minecraft/world/Container;Ljava/util/List;)Z",
+  "opcode": "interface",
+  "note": "26.3 删掉了 26.2 的 Container 搬运 API，ContainerBridge 按语义重建"
+ },
+ {
+  "owner": "net/minecraft/world/Container",
+  "name": "count",
+  "desc": "(Lnet/minecraft/world/item/ItemStack;ILnet/minecraft/core/Direction;)I",
+  "bridge": "dev/eriksonn/aeronautics/compat/ContainerBridge",
+  "new_desc": "(Lnet/minecraft/world/Container;Lnet/minecraft/world/item/ItemStack;ILnet/minecraft/core/Direction;)I",
+  "opcode": "interface",
+  "note": "26.3 删掉了 26.2 的 Container 搬运 API，ContainerBridge 按语义重建"
+ },
+ {
+  "owner": "net/minecraft/world/Container",
+  "name": "countAll",
+  "desc": "(Ljava/util/function/Predicate;ILnet/minecraft/core/Direction;)I",
+  "bridge": "dev/eriksonn/aeronautics/compat/ContainerBridge",
+  "new_desc": "(Lnet/minecraft/world/Container;Ljava/util/function/Predicate;ILnet/minecraft/core/Direction;)I",
+  "opcode": "interface",
+  "note": "26.3 删掉了 26.2 的 Container 搬运 API，ContainerBridge 按语义重建"
+ },
+ {
+  "owner": "net/minecraft/world/Container",
+  "name": "extractAll",
+  "desc": "(Ljava/util/function/Predicate;ILnet/minecraft/core/Direction;)I",
+  "bridge": "dev/eriksonn/aeronautics/compat/ContainerBridge",
+  "new_desc": "(Lnet/minecraft/world/Container;Ljava/util/function/Predicate;ILnet/minecraft/core/Direction;)I",
+  "opcode": "interface",
+  "note": "26.3 删掉了 26.2 的 Container 搬运 API，ContainerBridge 按语义重建"
+ },
+ {
+  "owner": "com/mojang/renderpearl/api/device/GpuDevice",
+  "name": "createCommandEncoder",
+  "desc": "()Lcom/mojang/renderpearl/api/commands/CommandEncoder;",
+  "bridge": "dev/eriksonn/aeronautics/compat/GpuDeviceBridge",
+  "new_desc": "(Lcom/mojang/renderpearl/api/device/GpuDevice;)Lcom/mojang/renderpearl/api/commands/CommandEncoder;",
+  "opcode": "virtual",
+  "note": "26.3 GpuDevice 变 interface；签名不变，静态桥零损失"
+ },
+ {
+  "owner": "com/mojang/renderpearl/api/device/GpuDevice",
+  "name": "createTexture",
+  "desc": "(Ljava/util/function/Supplier;ILcom/mojang/renderpearl/api/GpuFormat;IIII)Lcom/mojang/renderpearl/api/textures/GpuTexture;",
+  "bridge": "dev/eriksonn/aeronautics/compat/GpuDeviceBridge",
+  "new_desc": "(Lcom/mojang/renderpearl/api/device/GpuDevice;Ljava/util/function/Supplier;ILcom/mojang/renderpearl/api/GpuFormat;IIII)Lcom/mojang/renderpearl/api/textures/GpuTexture;",
+  "opcode": "virtual",
+  "note": "26.3 GpuDevice 变 interface；签名不变，静态桥零损失"
+ },
+ {
+  "owner": "com/mojang/renderpearl/api/device/GpuDevice",
+  "name": "createTextureView",
+  "desc": "(Lcom/mojang/renderpearl/api/textures/GpuTexture;)Lcom/mojang/renderpearl/api/textures/GpuTextureView;",
+  "bridge": "dev/eriksonn/aeronautics/compat/GpuDeviceBridge",
+  "new_desc": "(Lcom/mojang/renderpearl/api/device/GpuDevice;Lcom/mojang/renderpearl/api/textures/GpuTexture;)Lcom/mojang/renderpearl/api/textures/GpuTextureView;",
+  "opcode": "virtual",
+  "note": "26.3 GpuDevice 变 interface；签名不变，静态桥零损失"
+ },
+ {
+  "owner": "com/mojang/renderpearl/api/device/GpuDevice",
+  "name": "getDeviceInfo",
+  "desc": "()Lcom/mojang/renderpearl/api/device/DeviceInfo;",
+  "bridge": "dev/eriksonn/aeronautics/compat/GpuDeviceBridge",
+  "new_desc": "(Lcom/mojang/renderpearl/api/device/GpuDevice;)Lcom/mojang/renderpearl/api/device/DeviceInfo;",
+  "opcode": "virtual",
+  "note": "26.3 GpuDevice 变 interface；签名不变，静态桥零损失"
+ },
+ {
+  "owner": "com/mojang/renderpearl/api/buffers/GpuBuffer",
+  "name": "usage",
+  "desc": "()I",
+  "bridge": "dev/eriksonn/aeronautics/compat/GpuIfaceBridges",
+  "new_desc": "(Lcom/mojang/renderpearl/api/buffers/GpuBuffer;)I",
+  "opcode": "virtual",
+  "note": "26.3 该类变 interface（签名不变）⇒ 自动生成静态桥"
+ },
+ {
+  "owner": "com/mojang/renderpearl/api/commands/CommandEncoder",
+  "name": "clearColorAndDepthTextures",
+  "desc": "(Lcom/mojang/renderpearl/api/textures/GpuTexture;Lorg/joml/Vector4fc;Lcom/mojang/renderpearl/api/textures/GpuTexture;D)V",
+  "bridge": "dev/eriksonn/aeronautics/compat/GpuIfaceBridges",
+  "new_desc": "(Lcom/mojang/renderpearl/api/commands/CommandEncoder;Lcom/mojang/renderpearl/api/textures/GpuTexture;Lorg/joml/Vector4fc;Lcom/mojang/renderpearl/api/textures/GpuTexture;D)V",
+  "opcode": "virtual",
+  "note": "26.3 该类变 interface（签名不变）⇒ 自动生成静态桥"
+ },
+ {
+  "owner": "com/mojang/renderpearl/api/commands/CommandEncoder",
+  "name": "writeToTexture",
+  "desc": "(Lcom/mojang/renderpearl/api/textures/GpuTexture;Lcom/mojang/blaze3d/platform/NativeImage;)V",
+  "bridge": "dev/eriksonn/aeronautics/compat/GpuIfaceBridges",
+  "new_desc": "(Lcom/mojang/renderpearl/api/commands/CommandEncoder;Lcom/mojang/renderpearl/api/textures/GpuTexture;Lcom/mojang/blaze3d/platform/NativeImage;)V",
+  "opcode": "virtual",
+  "note": "26.3 该类变 interface（签名不变）⇒ 自动生成静态桥"
+ },
+ {
+  "owner": "com/mojang/renderpearl/api/textures/GpuSampler",
+  "name": "getAddressModeU",
+  "desc": "()Lcom/mojang/renderpearl/api/textures/AddressMode;",
+  "bridge": "dev/eriksonn/aeronautics/compat/GpuIfaceBridges",
+  "new_desc": "(Lcom/mojang/renderpearl/api/textures/GpuSampler;)Lcom/mojang/renderpearl/api/textures/AddressMode;",
+  "opcode": "virtual",
+  "note": "26.3 该类变 interface（签名不变）⇒ 自动生成静态桥"
+ },
+ {
+  "owner": "com/mojang/renderpearl/api/textures/GpuSampler",
+  "name": "getAddressModeV",
+  "desc": "()Lcom/mojang/renderpearl/api/textures/AddressMode;",
+  "bridge": "dev/eriksonn/aeronautics/compat/GpuIfaceBridges",
+  "new_desc": "(Lcom/mojang/renderpearl/api/textures/GpuSampler;)Lcom/mojang/renderpearl/api/textures/AddressMode;",
+  "opcode": "virtual",
+  "note": "26.3 该类变 interface（签名不变）⇒ 自动生成静态桥"
+ },
+ {
+  "owner": "com/mojang/renderpearl/api/textures/GpuTexture",
+  "name": "close",
+  "desc": "()V",
+  "bridge": "dev/eriksonn/aeronautics/compat/GpuIfaceBridges",
+  "new_desc": "(Lcom/mojang/renderpearl/api/textures/GpuTexture;)V",
+  "opcode": "virtual",
+  "note": "26.3 该类变 interface（签名不变）⇒ 自动生成静态桥"
+ },
+ {
+  "owner": "com/mojang/renderpearl/api/textures/GpuTexture",
+  "name": "getHeight",
+  "desc": "(I)I",
+  "bridge": "dev/eriksonn/aeronautics/compat/GpuIfaceBridges",
+  "new_desc": "(Lcom/mojang/renderpearl/api/textures/GpuTexture;I)I",
+  "opcode": "virtual",
+  "note": "26.3 该类变 interface（签名不变）⇒ 自动生成静态桥"
+ },
+ {
+  "owner": "com/mojang/renderpearl/api/textures/GpuTexture",
+  "name": "getWidth",
+  "desc": "(I)I",
+  "bridge": "dev/eriksonn/aeronautics/compat/GpuIfaceBridges",
+  "new_desc": "(Lcom/mojang/renderpearl/api/textures/GpuTexture;I)I",
+  "opcode": "virtual",
+  "note": "26.3 该类变 interface（签名不变）⇒ 自动生成静态桥"
+ },
+ {
+  "owner": "com/mojang/renderpearl/api/textures/GpuTextureView",
+  "name": "baseMipLevel",
+  "desc": "()I",
+  "bridge": "dev/eriksonn/aeronautics/compat/GpuIfaceBridges",
+  "new_desc": "(Lcom/mojang/renderpearl/api/textures/GpuTextureView;)I",
+  "opcode": "virtual",
+  "note": "26.3 该类变 interface（签名不变）⇒ 自动生成静态桥"
+ },
+ {
+  "owner": "com/mojang/renderpearl/api/textures/GpuTextureView",
+  "name": "close",
+  "desc": "()V",
+  "bridge": "dev/eriksonn/aeronautics/compat/GpuIfaceBridges",
+  "new_desc": "(Lcom/mojang/renderpearl/api/textures/GpuTextureView;)V",
+  "opcode": "virtual",
+  "note": "26.3 该类变 interface（签名不变）⇒ 自动生成静态桥"
+ },
+ {
+  "owner": "com/mojang/renderpearl/api/textures/GpuTextureView",
+  "name": "mipLevels",
+  "desc": "()I",
+  "bridge": "dev/eriksonn/aeronautics/compat/GpuIfaceBridges",
+  "new_desc": "(Lcom/mojang/renderpearl/api/textures/GpuTextureView;)I",
+  "opcode": "virtual",
+  "note": "26.3 该类变 interface（签名不变）⇒ 自动生成静态桥"
+ },
+ {
+  "owner": "com/mojang/renderpearl/api/textures/GpuTextureView",
+  "name": "texture",
+  "desc": "()Lcom/mojang/renderpearl/api/textures/GpuTexture;",
+  "bridge": "dev/eriksonn/aeronautics/compat/GpuIfaceBridges",
+  "new_desc": "(Lcom/mojang/renderpearl/api/textures/GpuTextureView;)Lcom/mojang/renderpearl/api/textures/GpuTexture;",
+  "opcode": "virtual",
+  "note": "26.3 该类变 interface（签名不变）⇒ 自动生成静态桥"
+ }
+]

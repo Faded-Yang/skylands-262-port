@@ -1,0 +1,11 @@
+[
+ {
+  "owner": "net/minecraft/world/level/Level",
+  "name": "getSeaLevel",
+  "desc": "()I",
+  "bridge": "dev/eriksonn/aeronautics/compat/SableLevelBridge",
+  "new_desc": "(Lnet/minecraft/world/level/Level;)I",
+  "opcode": "virtual",
+  "note": "Sable: ServerLevel.<init> 早期 chunkSource=null 时 getSeaLevel() NPE"
+ }
+]

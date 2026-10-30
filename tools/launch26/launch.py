@@ -793,6 +793,61 @@ def ensure_client_options(game_dir: Path) -> None:
     log(f"[launch26] options.txt 已确保: {opt}")
 
 
+
+# ── 全局单实例锁 ────────────────────────────────────────────────────────────
+# 同时跑两个客户端会抢 GPU（世界卡加载 / 启动期硬退出），所以所有启动必须串行。
+_GAME_LOCK = Path(os.environ.get("TEMP", ".")) / "skylands262-game.lock"
+
+
+def _pid_alive(pid: int) -> bool:
+    try:
+        if os.name == "nt":
+            import subprocess as _sp
+            out = _sp.run(["tasklist", "/FI", f"PID eq {pid}"], capture_output=True, text=True)
+            return str(pid) in out.stdout
+        os.kill(pid, 0)
+        return True
+    except Exception:
+        return False
+
+
+def acquire_game_lock(timeout_s: int = 900) -> bool:
+    import time as _t
+    deadline = _t.time() + timeout_s
+    warned = False
+    while True:
+        try:
+            fd = os.open(_GAME_LOCK, os.O_CREAT | os.O_EXCL | os.O_WRONLY)
+            os.write(fd, str(os.getpid()).encode())
+            os.close(fd)
+            return True
+        except FileExistsError:
+            try:
+                owner = int(_GAME_LOCK.read_text().strip() or "0")
+            except Exception:
+                owner = 0
+            if owner and not _pid_alive(owner):
+                try:
+                    _GAME_LOCK.unlink()
+                except OSError:
+                    pass
+                continue
+            if not warned:
+                log(f"[launch26] 已有另一局在跑（pid={owner}），等待其结束…（避免抢 GPU）")
+                warned = True
+            if _t.time() > deadline:
+                log("[launch26] 等待锁超时，放弃启动")
+                return False
+            _t.sleep(5)
+
+
+def release_game_lock() -> None:
+    try:
+        if _GAME_LOCK.exists() and _GAME_LOCK.read_text().strip() == str(os.getpid()):
+            _GAME_LOCK.unlink()
+    except OSError:
+        pass
+
 def main(argv=None) -> int:
     args = parse_args(argv)
     log(f"[launch26] mc_dir    = {args.mc_dir}")
@@ -839,7 +894,12 @@ def main(argv=None) -> int:
     log(f"[launch26] 命令行已写入 {cmd_file}")
 
     log("[launch26] ---- 启动 ----")
-    return launch_and_watch(cmd, args.game_dir, args.timeout, args.watch_title)
+    if not acquire_game_lock():
+        return 3
+    try:
+        return launch_and_watch(cmd, args.game_dir, args.timeout, args.watch_title)
+    finally:
+        release_game_lock()
 
 
 if __name__ == "__main__":

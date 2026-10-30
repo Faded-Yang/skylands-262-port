@@ -1,0 +1,11 @@
+[
+ {
+  "owner": "net/neoforged/neoforge/common/ModConfigSpec$ConfigValue",
+  "name": "getRaw",
+  "desc": "()Ljava/lang/Object;",
+  "bridge": "dev/eriksonn/aeronautics/compat/ConfigRawBridge",
+  "new_desc": "(Lnet/neoforged/neoforge/common/ModConfigSpec$ConfigValue;)Ljava/lang/Object;",
+  "opcode": "virtual",
+  "note": "配置未 load 时 getRaw 抛 IllegalStateException；桥接退回 getDefault()"
+ }
+]

@@ -1,0 +1,13 @@
+{
+ "note": "landmine allowlist (scan_landmines.py). 每条都要写理由；新增前确认「运行期真的已被解决」，不是「懒得修」。",
+ "members": [
+  [
+   "com/mojang/blaze3d/platform/InputConstants",
+   "isKeyDown",
+   "(Lcom/mojang/blaze3d/platform/Window;I)Z"
+  ]
+ ],
+ "reasons": {
+  "com/mojang/blaze3d/platform/InputConstants#isKeyDown(Lcom/mojang/blaze3d/platform/Window;I)Z": "R406：26.3 删除该重载；已由 sky262crashfix 的 InputConstantsCompatMixin 在运行期加回（public static synthetic，delegate 到 (I)Z）。直断言 InputConstants.getDeclaredMethod(isKeyDown, Window, int) = true；tooltip A/B 4->0。若哪天 sky262crashfix 被移除/失效，这条会真的炸，届时删掉本 allow 条目。"
+ }
+}

@@ -42,6 +42,10 @@ def audit_jar(path):
             continue
         ns_langs.setdefault(ns, {})[fn[:-5]] = n
 
+    for fn, path in [(p2, p3) for ns2, l2 in ns_langs.items() for p2, p3 in l2.items()]:
+        if z.read(path).startswith(b"\xef\xbb\xbf"):
+            BOM_FILES.append((os.path.basename(path), p2))
+
     for ns, langs in ns_langs.items():
         en_path = langs.get("en_us")
         zh_path = langs.get("zh_cn")
@@ -67,6 +71,9 @@ def audit_jar(path):
         out.append((ns, len(en_keys), len(zh_keys), missing[:5], len(missing), zh_err))
     z.close()
     return out
+
+
+BOM_FILES = []
 
 
 def main():
@@ -103,6 +110,11 @@ def main():
         print("\n  ★★ zh_cn.json 解析失败（%d 个 namespace，缺口已计入上面）:" % len(broken))
         for jar, ns, en, zh, miss, sample, err in broken:
             print("     %-44s %-22s en=%d  错误: %s" % (jar[:44], ns, en, err))
+
+    if BOM_FILES:
+        print("\n  ★★ UTF-8 BOM 的 lang 文件（26.3 会导致全量 mod lang 回退 en_us，必须去 BOM）: %d" % len(BOM_FILES))
+        for jar, path in BOM_FILES:
+            print("     %-46s %s" % (jar[:46], path))
 
     nz = [r for r in rows if r[3] == 0]
     if nz:

@@ -1,0 +1,62 @@
+{
+ "H": [
+  [
+   -37.68749999999728,
+   1.0576730018896313e-11,
+   658.1874999999646
+  ],
+  [
+   -1.2526819449798134e-12,
+   -37.58333333333028,
+   453.2499999999619
+  ],
+  [
+   -1.667259230917815e-14,
+   4.44602461578084e-14,
+   1.0
+  ]
+ ],
+ "info": {
+  "platform_rect": [
+   319,
+   115,
+   922,
+   566
+  ],
+  "quadrant_family": {
+   "TL": "yellow_concrete",
+   "TR": "lime_concrete",
+   "BL": "blue_concrete",
+   "BR": "red_concrete"
+  },
+  "reproj_residual_px": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "cell_px": [
+   37.7,
+   37.6
+  ],
+  "H": [
+   [
+    -37.68749999999728,
+    1.0576730018896313e-11,
+    658.1874999999646
+   ],
+   [
+    -1.2526819449798134e-12,
+    -37.58333333333028,
+    453.2499999999619
+   ],
+   [
+    -1.667259230917815e-14,
+    4.44602461578084e-14,
+    1.0
+   ]
+  ],
+  "image": "C:\\Users\\95959\\OneDrive\\Desktop\\Work\\skylands-262\\work\\run26\\port\\g300\\game-vis1\\shots\\audit-calib.png",
+  "debug": "C:\\Users\\95959\\OneDrive\\Desktop\\Work\\skylands-262\\scratch\\vis\\blockaudit\\audit-calib-debug.png"
+ }
+}

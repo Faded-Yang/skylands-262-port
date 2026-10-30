@@ -1,0 +1,60 @@
+[
+ {
+  "owner": "com/mojang/blaze3d/platform/InputConstants$Type",
+  "name": "KEYSYM",
+  "desc": "Lcom/mojang/blaze3d/platform/InputConstants$Type;",
+  "new_name": "KEYBOARD",
+  "note": "26.3 枚举常量改名 KEYSYM -> KEYBOARD（javap 实测）"
+ },
+ {
+  "owner": "net/minecraft/world/entity/Entity",
+  "name": "hurtMarked",
+  "desc": "Z",
+  "new_name": "needsSync",
+  "note": "26.3 Entity 把 hurtMarked 改名为 needsSync（同为「强制同步速度」标志）"
+ },
+ {
+  "owner": "net/minecraft/world/entity/item/ItemEntity",
+  "name": "hurtMarked",
+  "desc": "Z",
+  "new_owner": "net/minecraft/world/entity/Entity",
+  "new_name": "needsSync",
+  "note": "继承自 Entity，同上"
+ },
+ {
+  "owner": "net/minecraft/world/entity/vehicle/minecart/AbstractMinecart",
+  "name": "hurtMarked",
+  "desc": "Z",
+  "new_owner": "net/minecraft/world/entity/Entity",
+  "new_name": "needsSync",
+  "note": "继承自 Entity，同上"
+ },
+ {
+  "owner": "net/minecraft/world/level/block/entity/SignText",
+  "name": "DIRECT_CODEC",
+  "desc": "Lcom/mojang/serialization/Codec;",
+  "new_name": "CODEC",
+  "note": "26.3 SignText 只留 CODEC（同描述符）"
+ },
+ {
+  "owner": "net/minecraft/client/renderer/BindGroupLayouts",
+  "name": "MATRICES_PROJECTION",
+  "desc": "Lcom/mojang/renderpearl/api/pipeline/BindGroupLayout;",
+  "new_name": "PROJECTION",
+  "note": "26.3 BindGroupLayouts 改名 MATRICES_PROJECTION -> PROJECTION（同类型）"
+ },
+ {
+  "owner": "com/mojang/blaze3d/systems/RenderSystem",
+  "name": "outputColorTextureOverride",
+  "desc": "Lcom/mojang/renderpearl/api/textures/GpuTextureView;",
+  "new_owner": "dev/eriksonn/aeronautics/compat/RenderBitsBridge",
+  "note": "26.3 删了输出纹理覆盖字段 ⇒ 落到桥接静态字段（渲染目标不被真正重定向，降级）"
+ },
+ {
+  "owner": "com/mojang/blaze3d/systems/RenderSystem",
+  "name": "outputDepthTextureOverride",
+  "desc": "Lcom/mojang/renderpearl/api/textures/GpuTextureView;",
+  "new_owner": "dev/eriksonn/aeronautics/compat/RenderBitsBridge",
+  "note": "同上"
+ }
+]

@@ -23,3 +23,16 @@
 ## MCP 验证常用方法
 
 `player.getState`、`world.getBlock`、`player.useBlock`（useItemOn + TryEmptyHand → useWithoutItem）、`player.interact`、`screenshot.take`、`chat.send {\"message\":\"...\"}`。
+## culturaldelights（2026-10-20 修复）
+
+| 项 | 状态 |
+|---|---|
+| 食物 | ✅ 40 个食物 id 注册 FoodProperties（snack 2/0.3、meal 6/0.6）；probe `serverUseItem` Pass→Success 对照证明生效 |
+| 橱窗/display case | ❌ 原 jar 无该方块（blockstates 仅作物/箱子/垫子）；等用户给准确 block id |
+| 其余 | 作物/箱子/垫子仅静态方块，无生长/收获行为 |
+## TFMG 火把（2026-10-20 修复）
+
+| 项 | 状态 |
+|---|---|
+| `tfmg:lithium_torch` | ✅ alpha 二值化（<128→0，否则255），无 render_type；probe 并排特写无透视/黑块；SHA `62a36238…` |
+| 其它非整块 alpha 方块 | 后续复用 alpha 二值化方案；`force_translucent` 仅按 26.3 纹理机制使用 |

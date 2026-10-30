@@ -1,6 +1,6 @@
 # audit-data-refs —— live 114 数据引用完整性审计
 
-> 静态审计（不占 GPU）：扫 live 114 jar 的 `data/<ns>/{recipe,tags,loot_table,advancement}`，提取物品/方块/标签引用，对比实际注册 id。
+> 静态审计（不占 GPU）：扫 live 113 jar 的 `data/<ns>/{recipe,tags,loot_table,advancement}`，提取物品/方块/标签引用，对比实际注册 id。
 > DOCS FIRST：参考 `docs/API-263-data-schema.md §7`（源码 jar 缺 data、数据应从发布 jar 取）、`docs/HANDOFF.md`（改数据要么全删要么全修、半截引用会让注册表失败）、`docs/DELIVERY.md`（NS 数据实测口径）。
 
 ## 1. 方法
@@ -82,7 +82,7 @@
 - 未展开 `data/fabric` / `resource_conditions` 的条件求值：带 `mod_loaded` 条件的引用本可以合法缺失；当前 4 条均无此类条件，故按缺失记录；
 - 未审计 worldgen（biome/feature/structure）引用：另属 `API-263 §8` 的级联过滤范畴，本轮只做 item/block/tag/loot/advancement。
 ## 6. 清理候选（P2/P3，待 promote）
-- staging：`g70/stage/data-ref-clean-final`（base live 114，替换 FD/createaddition 同名 jar；114 jar）；
+- staging：`g70/stage/data-ref-clean-final`（base live **113**，替换 FD/createaddition 同名 jar；113 jar）；
 - **FarmersDelight**：`8528d8b9563169b0b593e72e160ba4520cf236fe676116f410ebe1050051ffdc`（3,439,093 B）；
   - 删除 `data/farmersdelight/recipe/integration/silentgear/`（实际是 **1 个 recipe 文件**，内含 2 个缺失 id：netherwood_log / stripped_netherwood_log）；
   - `data/c/tags/item/hidden_from_recipe_viewers.json` values 清空（只剩 debug_pumpkin_pie entry）；
@@ -94,7 +94,7 @@
 - 两 jar 的 class/assets 均逐字节未变（diff 仅 data 文件），jar 数不变。
 
 ## 7. kubejs / datapack / compat 目录扫描
-- live 114 jar 中 **`kubejs/` 0 条、`datapacks/` 0 条**；
+- live 113 jar 中 **`kubejs/` 0 条、`datapacks/` 0 条**；
 - `data/*/{compat,integration}/` 共 227 条，分布：
   | jar | 条数 |
   |---|---:|
@@ -103,3 +103,7 @@
   | `createaddition` | 7 |
   | `create-fly` | 4 |
 - 清理前缺失引用只在 FD（SilentGear）与 createaddition（AE2）；清理后对 staging 全量审计 **0 缺失**；其余 compat 配方引用的 mod 均已在 live 中。
+## 8. 2026-10-20 18:2x 更新（以 live 为准）
+- live 现 **114 jar**：`FarmersDelight-26.3-3.6.28+refabricated.jar` = `8528d8b9…`（本轮清理件）；`createaddition-1.3.4-26.3.jar` = `2b19eb08…`（非本轮 `8f470700…`，已由 Lead/其他线另行清理）；
+- 对 live 复跑 `tools/audit_data_refs.py`：items 6452 / blocks 5475 / tags 2120，**item_miss 0 / block_miss 0 / tag_miss 0**；
+- 旧 staging `g70/stage/data-ref-clean-final`（113）已过时作废；本轮实际 live 清理已生效。

@@ -1,0 +1,11 @@
+[
+ {
+  "owner": "net/minecraft/client/ClientClockManager",
+  "name": "getTotalTicks",
+  "desc": "(Lnet/minecraft/core/Holder;)J",
+  "bridge": "dev/eriksonn/aeronautics/compat/ClientClockBridge",
+  "new_desc": "(Lnet/minecraft/client/ClientClockManager;Lnet/minecraft/core/Holder;)J",
+  "opcode": "virtual",
+  "note": "26.3: getTotalTicks(Holder) -> getInstance(Holder).totalTicks()"
+ }
+]

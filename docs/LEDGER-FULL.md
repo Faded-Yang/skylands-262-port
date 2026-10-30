@@ -223,3 +223,45 @@ everse-engineer-anything（REA），仅在用户点名后调用。
 
 
 
+
+
+
+## R990 · 1.0.7 promote（118 jar）：27 triggers + aero 数据 138 advancement + Create 补 23 配方（2026-10-21 20:00）
+
+- promote bundle `g76/stage/g184-promote`（3 项：1 替换 + 2 新增 + 1 stale 删除）→ live **118 jar / 118 ids**；
+- 替换 aeronautics `7d877f79`（27 个 custom trigger 注册）；新增 `sky262-aero-recipes-1.0.8.jar`（`2c8fe78f`：124 recipe + 137 loot + **138 advancement**，parent 闭包 0 缺失），自动移除旧 1.0.6；新增 `sky262-create-extra-recipes-1.0.1.jar`（`5e04690e`：22 stonecutting + copper_ingot）；
+- 终验（live 118 + mcpfabric，`game-live107`）：`Registry loading errors`=0；`Failed to parse` 4 条全是 Realms 登录噪声；`Couldn't load advancements` 仅历史 5 条（createframed 3 + dungeons_arise 2）；`recipe give` stonecutting 2 条成功；`advancement grant` `aeronautics:for_every_action`/`simulated:must_come_up` 成功；crash-reports 0；
+- 机器矩阵 round 3：belt PASS（belt_connector 两击 + funnel 投料传送 ≈3.6 格）、crafter 建网 PASS（cogwheel 啮合 ±16）、deployer 建网+插料 PASS（产出待查）、controls standalone 无 BE（需列车）；
+- 工具修正：`players.teleport` 是 RPC（之前误用 command 导致 aim 全偏）；`players.give` 后要选槽；`interact.placeBlock({x,y,z,face})` 最可靠；
+- 发布说明 `docs/release-1.0.7.md`；截图失败经验：窗口最小化时 `vision.screenshot` 返回 null，用 Windows MCP 恢复窗口（本次 `App switch` 对已销毁句柄失败，可改用 Snapshot+Click 激活）。
+
+## R991 · 游戏内视觉取证（2026-10-22，子代理 visual-probe）
+
+- **实验性存档弹窗打不开也点不掉**：26.3 的 `BackupConfirmScreen extends Screen`（不是 ConfirmScreen）→ mcpfabric `UiHandlers` 白名单不含它，`ui.*` 永久 `ui_refused`；`sky islands` 的 level.dat 无 enabledFeatures，实验性来自 `LevelStorageSource:170` 的 registry lifecycle（mod datapack 世界生成），改存档无效 ⇒ **quickPlay 进该存档必卡**，验证改用干净存档（vis1）。
+- **创造栏是 EMI 风格自定义界面**（左 9x5 物品格 + 右侧 1/137 面板 + 7 tab + 2/5 翻页），不是原版 195x136；Lead 扫 35 tab / 1121 格 missing=0 ⇒ 物品图标不是问题所在。
+- **世界内 hotbar 的紫色小图形是资源包槽位装饰**，不是破损物品（勿误判）；EMI 创造界面 hotbar 行确有 1 个品红黑棋盘 item。
+- 方块渲染审计脚手架 `scratch/vis/block_audit.py`：旁观模式相机（`tp @a 0.5 112.38 2.5 0 90`，无重力）+ 平台 y=100/方块 y=101 + 彩色象限标定单应（cell_px≈37.7）+ 顶面品红占比判定 + `world.getBlock` 权威核查；45 个/批 ≈1.4s。
+- 细节：`docs/visual-audit-2026-10-22.md`。
+## R992 · 用户抱怨「绝大多数物品显示有问题」的实测取证 + 判据纠正（2026-10-22，Lead）
+
+- **实测：物品图标不是大面积破损**。staging `g300/game-vis1`（交付 118 + mcpfabric，干净世界 vis1）逐 tab 截图 35 张 / **1121 个可见物品格**，品红-黑棋盘 missing = **0**；原版/文化乐事/createdeco/dndecor/interiors/tfmg/Create 系图标均正常。
+- **历史 KPI 是错的**：只 grep `Missing textures in model`（1.0.3 起恒 0），漏掉 26.3 同样致命的三类：`Missing texture references in model`（395 行）、`Rejecting block model ... outside of supported atlas`（32 行）、`Unable to bake item model`（1 行）。⇒ 显示/模型验收改用 `tools/audit_models.py` 的 reason 计数。
+- **新工具 `tools/audit_models.py`**（子代理 model-auditor）：镜像 MaterialBaker/TextureSlots/SimpleModelWrapper/ModelDiscovery/CuboidItemModelWrapper/FaceBakery；扫 118 jar + 原版 assets（9944 block 模型根 / 6925 item 定义）；与 latest.log **7 类全部对齐**（395/395、29/29、8/8、4/4、2/2、1/1、0/0）。清单 `scratch/audit/broken.json`（476 条，带 fix_hint/channel）｜报告 `scratch/audit/report.md`｜证据 `docs/model-audit-263.md`。
+- **真实破损面**（结论：小面积、集中）：item 97 个 id / block 71 个 id。interiors 34 item + 34 block（272 条 `#missing`）、createdieselgenerators 17 block、createdeco 6 block、sophisticatedbackpacks 6 block、tfmg 12 item、toolgun 7 item（缺 png）、`tfmg:crankshaft`（uv 越界：26.3 不认 NeoForge `texture_size`）。
+- **Rejecting 28/29 的真因**：create-fly 的 `ModelBakeryMixin`（Flywheel PartialModel）在 bakeModels 后对每个 additional id 调 `SimpleModelWrapper.bake` ⇒ item 命名空间的模型被按 block 规则拒（createframed 19 + simulated 9 + rope 1）。修法：把被引用的 textures/item/** png 复制到 textures/block/** 并改指向。
+- **另一类「图标对但是画的是别人」**（约 97 个）：sophisticatedstorage 51 / sophisticatedbackpacks 14 全部指向 `item/advanced_alchemy_upgrade`；tfmg 16 个指向 `minecraft:item/barrier`（屏障）；create_dragons_plus 16 个共用 dye overlay。上游资源已取：Modrinth 有 **26.3 NeoForge 构建**（SB `26.3-3.26.15.2225` / SS `26.3-1.5.124.2189`）→ `g300/upstream/`；打过补丁的候选 jar `g300/out/*.jar`（`.orig` 备份）。限制：`*_workbench_upgrade` 16 个来自附属 mod、backpack 本体是 `type: sophisticatedbackpacks:backpack` 特殊模型（reduced jar 无渲染器）。
+- **用户存档无 quickPlay 进入**：`sky islands` 的 datapack 世界生成让 registry lifecycle = experimental ⇒ `WorldOpenFlows.askForBackup` 弹 `BackupConfirmScreen`（继承 `Screen`，mcpfabric `ui.*` 白名单不含 ⇒ 无法点掉；人手动点可以进）。⇒ 无人值守验证必须用干净存档（vis1）；给用户的启动器要么接受多点一次，要么把世界改成非实验性（不建议）。
+- **可复用通道**：`scratch/mcpc.mjs`（桥调用器，避免 PowerShell 吃反斜杠）｜`tools/focuswin.py --click` + 坐标映射（客户区原点 640,440）｜`scratch/vis/block_audit.py`（旁观相机 + 单应标定 + 顶面品红判定，45 方块/批 ≈1.4s）｜`scratch/tour.py`+`scratch/gridscan.py`（创造栏全 tab 扫描）。
+- **未完成/下一轮**：① `g300/out` 两个图标 jar 需 A/B（staging 换 jar → 重开 → 截图双 tab 对比）后 promote；② interiors 272 条 `#missing` 修复件（model-fixer 产出中）；③ tfmg barrier 图标上游 slug 未找到；④ **需要用户给一张他看到的坏物品截图**，否则「绝大多数」在本版本无法复现。
+- 详细：`docs/R569-model-display-audit.md`、`docs/visual-audit-2026-10-22.md`。
+
+### R992 交付件（本轮结束时：**候选，未 promote**）
+
+- `work/run26/port/g300/out/sky262-modelfix-1.0.0.jar`（103,131 B；**mod id 已改 `zsky262_modelfix`** 以保证资源包优先级；SHA `7A1488F6…A84107`）：interiors 306 个 `#missing` 模型覆盖，离线复检 306/306 解析成功；预期 `Missing texture references` 395→89。明细 `scratch/fix/CHANGELOG.md`（含未做清单）。
+- `g300/out/sky262-sophisticated-{backpacks,storage}-*.jar`：从 Modrinth **26.3 上游**取的资源补丁（修 51+14 个共用占位图标），`.orig` 为原件。
+- `tools/audit_models.py` + `scratch/audit/{report.md,broken.json}`；`scratch/vis/{icon_audit.py,block_audit.py}`（两套实拍审计 + 正控验证）；`scratch/{mcpc.mjs,tour.py,gridscan.py,iconscan.py,flatdup.py,langscan.py}`。
+- **26.3 资源包优先级（实测）**：`PackRepository.openAllSelected()` 列表末尾最高；mod 包按 **mod id 字典序升序**追加 ⇒ 覆盖包 id 必须字典序大于被覆盖 mod（先例 `zsky262_preset`）；运行期看 `Reloading ResourceManager:` 行核对。
+- **26.3 `#missing` 无损修法**：子模型 `textures` 补 `"missing": "#<已解析槽>"`（`TextureSlots.getMaterial` 会剥 `#`）。
+- **26.3 `FaceBakery` 对越界 UV 直接抛** `IllegalArgumentException`（旧版钳位）⇒ `tfmg:crankshaft` 烘不出来。
+- **下一轮第一件事**：把 `audit_models` 报的 71 个 block id 逐个 setblock 实拍，区分「紫黑 / 不可见 / 形状错」——坏模型多半是**渲染不出来**而不是品红（`scratch/vis/block_audit.py` 约 2 分钟，需独占实例）。
+
